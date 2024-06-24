@@ -7,35 +7,33 @@ h1 a, h1 a:link, h1 a:visited, h1 a:focus, h1 a:hover, h1 a:active {
 #blog-post-container {
     display: flex;
     flex-direction: column;
-    align-items: center;
     margin-top: 100px;
     width: 100%;
+    align-items: center; /* Center align the posts */
 }
 
 #blog-post-container article {
-    width: 80%;
-    max-width: 800px;
+    width: 80%; /* Set the width of the articles */
     margin-bottom: 50px;
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    justify-content: center;
     box-sizing: border-box;
     padding: 40px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Add shadow for pop-out effect */
-    background: white; /* Ensure the background is white */
-    transition: transform 0.3s; /* Smooth transition for hover effect */
 }
 
-#blog-post-container article:hover {
-    transform: translateY(-10px); /* Slight lift on hover */
+.post-box {
+    width: 100%;
+    max-width: 800px;
+    background: #fff;
+    border: 2px solid #eee;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 article h1 {
     font-size: 2.5rem;
     margin: 10px 0;
-    text-align: left;
 }
 
 article p {
@@ -63,28 +61,22 @@ article img {
 
 .post-meta {
     display: flex;
-    gap: 10px;
+    justify-content: space-between;
     width: 100%;
-    justify-content: space-between; /* Spread items across the full width */
-    flex-wrap: wrap;
     margin-bottom: 20px;
+    flex-wrap: wrap;
 }
 
-#blog-preview-date-time,
-#post-tags {
+#blog-preview-date-time, #post-tags {
     display: flex;
     align-items: center;
     gap: 10px;
     border: 3px solid black;
     padding: 10px;
     border-radius: 10px;
-    flex: 1;
-    flex-shrink: 0; /* Prevent these elements from growing too large */
     font-size: 0.9rem;
-}
-
-#post-tags {
-    flex-wrap: wrap;
+    flex-shrink: 0;
+    max-width: 48%; /* Ensure the boxes don't stretch */
 }
 
 #post-tags a {
@@ -100,12 +92,8 @@ article img {
 }
 
 @media (max-width: 768px) {
-    #blog-post-container {
-        width: 100%;
-    }
-
     #blog-post-container article {
-        width: 90%;
+        width: 100%;
         padding: 20px;
     }
 
@@ -129,20 +117,18 @@ article img {
     }
 
     .post-meta {
-        display: block;
-    }
-
-    #blog-preview-date-time,
-    #post-tags {
-        width: auto;
-        margin-bottom: 10px;
-    }
-
-    #post-tags {
-        flex-direction: row;
-        justify-content: flex-start;
+        flex-direction: column;
+        align-items: flex-start;
         width: 100%;
+    }
+
+    #blog-preview-date-time, #post-tags {
+        max-width: 100%;
         margin-bottom: 10px;
+    }
+
+    #post-tags {
+        flex-wrap: wrap;
     }
 
     /* Add a crimson divider between posts */
