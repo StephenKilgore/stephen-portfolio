@@ -17,6 +17,7 @@
 
 .post-box {
     width: 100%;
+    max-width: 800px;
     background: #fff;
     border: 1px solid #ddd; /* Adjust border */
     border-radius: 10px;
@@ -114,7 +115,7 @@ article img {
 
 @media (max-width: 768px) {
     #blog-post-container article {
-        width: 90%; /* Adjust width for mobile */
+        width: 100%; /* Maximize width for mobile */
         padding: 10px; /* Reduce padding for mobile */
     }
 
@@ -158,9 +159,19 @@ article img {
         overflow: visible; /* Show all tags */
     }
 
-    /* Add a crimson divider between posts */
+    /* Remove the crimson divider between posts */
     #blog-post-container article + article {
-        border-top: 2px solid crimson;
-        padding-top: 20px;
+        border-top: none;
+        padding-top: 0;
     }
+}
+
+/* Adjust the site container for mobile to reduce whitespace */
+#site-container {
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    display: flex;
+    flex-direction: column;
 }
