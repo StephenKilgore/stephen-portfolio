@@ -70,6 +70,7 @@ article img {
     width: 100%;
     margin-bottom: 20px;
     flex-wrap: wrap;
+    gap: 10px; /* Add gap to separate elements */
 }
 
 #blog-preview-date-time, #post-tags {
@@ -83,9 +84,14 @@ article img {
     flex-shrink: 0;
 }
 
+#blog-preview-date-time {
+    flex: 1 1 auto; /* Allow it to take necessary space */
+}
+
 #post-tags {
+    flex: 1 1 auto; /* Allow it to take necessary space */
+    display: flex;
     flex-wrap: wrap; /* Allow tags to wrap to multiple lines */
-    max-width: calc(100% - 120px); /* Ensure it doesn't stretch the date/read time box */
 }
 
 #post-tags a {
