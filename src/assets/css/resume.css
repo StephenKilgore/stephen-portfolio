@@ -96,8 +96,9 @@ a:hover {
 }
 
 .resume-section img {
-    max-height: 2rem;
+    max-height: 1.5rem; /* Uniform size for all logos */
     width: auto;
+    vertical-align: middle; /* Align with the middle of the text */
 }
 
 @media (max-width: 768px) {
@@ -120,6 +121,6 @@ a:hover {
     }
 
     .resume-section img {
-        max-height: 1.5rem;
+        max-height: 1.25rem;
     }
 }
