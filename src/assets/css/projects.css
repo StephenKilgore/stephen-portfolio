@@ -10,6 +10,9 @@
 
 .project-list {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center align the project list */
 }
 
 .project-item {
@@ -152,7 +155,7 @@
   }
 
   .project-item {
-      width: 100%; /* Maximize width for mobile */
+      width: 90%; /* Maximize width for mobile */
       padding: 10px; /* Reduce padding for mobile */
   }
 
@@ -189,12 +192,14 @@
   .links {
       flex-direction: column;
       align-items: center;
+      width: 100%; /* Ensure it takes full width */
   }
 
   .links .button {
       width: 80%;
       max-width: 250px;
       padding: 8px 16px;
+      text-align: center; /* Center the buttons */
   }
 
   .technologies ul {
