@@ -88,7 +88,7 @@ h2 {
 }
 
 #site-logo {
-    width: 100%;
+    max-width: 100%;
     height: auto;
 }
 
@@ -182,11 +182,12 @@ li a.active {
     }
 
     #site-logo {
-        max-width: 100%; /* Ensure it doesn't stretch */
+        max-width: 100%;
+        height: auto;
     }
 
     .site-head__brand img {
-        width: 100%;
-        height: auto;
+        max-height: 3.125rem; /* 50px */
+        width: auto;
     }
 }
