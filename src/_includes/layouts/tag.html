@@ -1,0 +1,31 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+<link rel="stylesheet" href="/assets/css/blog.css">
+
+<div id="blog-post-container">
+  {%- for post in collections.postsByTag[tag] -%}
+  <article>
+    <div id="img-div">
+      <a href="{{ post.url }}">
+        <img src="{{ post.data.image }}" />
+      </a>
+    </div>
+    <div class="post-meta">
+      <div id="blog-preview-date-time">
+        <span class="icon"><i class="fas fa-calendar-alt"></i></span> {{ post.data.date }}
+        <span class="icon"><i class="fas fa-clock"></i></span> {{ post.data.rt }}
+      </div>
+      <div id="post-tags">
+        <span class="icon"><i class="fas fa-tags"></i></span>
+        {%- for tag in post.data.tags -%}
+          <a href="/tags/{{ tag | slug }}">{{ tag }}</a>{% if not loop.last %}<span style="color: crimson">,</span>{% endif %}
+        {%- endfor -%}
+      </div>
+    </div>
+    <h1><a href="{{ post.url }}">{{ post.data.title }}</a></h1>
+    <p>{{ post.data.description }}</p>
+  </article>
+  {%- endfor -%}
+</div>
+{% endblock %}

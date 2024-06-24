@@ -1,0 +1,21 @@
+<header role="banner" class="site-head">
+  <div class="wrapper">
+    <div class="site-head__inner">
+      <a href="/" aria-label="Stephen Kilgore | home" class="site-head__brand">
+        <img src="{{site.logo_url}}" id="site-logo" alt="Site Logo"/>
+      </a>
+      <nav class="[ nav ] [ site-head__nav ] [ font-sans ]" aria-label="Primary">
+        <ul class="nav__list">
+          {% for item in navigation.items %}
+          <li>
+            <a href="{{ item.url }}" 
+               class="{% if item.url == '/' and page.url == '/' %}active{% elif item.url != '/' and page.url.startsWith(item.url) %}active{% elif item.url == '/blog/' and page.url.startsWith('/tags/') %}active{% endif %}">
+               {{ item.text }}
+            </a>
+          </li>
+          {% endfor %}
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>

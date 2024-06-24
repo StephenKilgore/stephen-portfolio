@@ -1,0 +1,8 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+<div class="project-content">
+    <img src="{{image}}">
+    {{ content | safe }}
+</div>
+{% endblock %}

@@ -1,0 +1,105 @@
+.project-content {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  text-align: left; /* Ensure content is left-aligned */
+  width: 90%;
+  margin: 0 auto; /* Center the content container */
+  margin-top: 100px;
+}
+/* Scoped styles for post content */
+.project-content h1 {
+  font-size: 2.5rem;
+  margin: 20px 0;
+  text-align: center;
+  color: #333;
+}
+
+.project-content h2 {
+  font-size: 2rem;
+  margin: 20px 0;
+  color: #555;
+}
+
+.project-content h3 {
+  font-size: 1.75rem;
+  margin: 20px 0;
+  color: #777;
+}
+
+.project-content h4 {
+  font-size: 1.5rem;
+  margin: 20px 0;
+  color: #999;
+}
+
+.project-content h5 {
+  font-size: 1.25rem;
+  margin: 20px 0;
+  color: #bbb;
+}
+
+.project-content h6 {
+  font-size: 1rem;
+  margin: 20px 0;
+  color: #ddd;
+}
+
+.project-content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 10px 0;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.project-content a {
+  color: crimson;
+  text-decoration: none;
+}
+
+.project-content a:hover {
+  text-decoration: underline;
+}
+
+.project-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin: 20px 0;
+}
+
+.project-content ul, .project-content ol {
+  margin: 20px 0;
+  padding-left: 40px;
+}
+
+.project-content li {
+  margin: 10px 0;
+}
+
+.project-content em {
+  font-style: italic;
+}
+
+.project-content strong {
+  font-weight: bold;
+}
+
+.project-content pre {
+  background: #f5f5f5;
+  padding: 10px;
+  border-radius: 5px;
+  overflow-x: auto;
+}
+
+.project-content code {
+  background: #f5f5f5;
+  padding: 2px 5px;
+  border-radius: 3px;
+}
+.project-content img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px; /* Make the image rounded */
+  object-fit: cover;
+}

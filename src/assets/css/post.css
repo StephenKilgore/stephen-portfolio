@@ -1,0 +1,248 @@
+/* Common styles */
+h1 {
+    font-size: 2.5rem;
+    margin: 10px 0;
+    text-align: center;
+  }
+  
+  p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+  }
+  
+  #img-div {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .post-image {
+    width: 100%;
+    max-width: 600px; /* Set a maximum width for the image */
+    height: auto;
+    border-radius: 20px; /* Make the image rounded */
+    object-fit: cover;
+  }
+  
+  /* Center image container with fixed size and rounded corners */
+  #img-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 600px; /* Set a maximum width for the container */
+    margin: 0 auto 20px auto; /* Center the container and add bottom margin */
+  }
+  
+  /* Stylized divider */
+  .divider {
+    border: none;
+    border-top: 3px solid black;
+    margin: 20px 0;
+    width: 100%;
+    max-width: 600px; /* Set a maximum width for the divider */
+    margin: 20px auto; /* Center the divider */
+  }
+  
+  /* Longer stylized divider */
+  .divider-long {
+    border: none;
+    border-top: 3px solid black;
+    margin: 20px 0;
+    width: 100%;
+    max-width: 1000px; /* Set a longer maximum width for the divider */
+    margin: 20px auto; /* Center the divider */
+  }
+  
+  .post-meta {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between the date/time and tags */
+    width: 100%;
+    margin-bottom: 100px; /* Space between meta info and other elements */
+    flex-wrap: wrap; /* Allow wrapping */
+  }
+  
+  #blog-preview-date-time {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Add space between items */
+    border: 3px solid black;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 0.9rem; /* Adjust font size */
+  }
+  
+  #post-tags {
+    display: flex;
+    align-items: center;
+    gap: 1px; /* Add space between items */
+    border: 3px solid black;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 0.9rem; /* Adjust font size */
+  }
+  
+  #post-tags a {
+    color: black; /* Tag link color */
+    text-decoration: none;
+  }
+  
+  .icon {
+    color: crimson; /* Set the icon color to crimson */
+    margin-right: 5px; /* Space between icon and text */
+    display: flex;
+    align-items: center;
+  }
+  .post {
+    margin-top: 100px;
+    width: 100%;
+  }
+  
+  .post-content {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    text-align: left; /* Ensure content is left-aligned */
+    width: 90%;
+    margin: 0 auto; /* Center the content container */
+  }
+  /* Scoped styles for post content */
+.post-content h1 {
+    font-size: 2.5rem;
+    margin: 20px 0;
+    text-align: center;
+    color: #333;
+  }
+  
+  .post-content h2 {
+    font-size: 2rem;
+    margin: 20px 0;
+    color: #555;
+  }
+  
+  .post-content h3 {
+    font-size: 1.75rem;
+    margin: 20px 0;
+    color: #777;
+  }
+  
+  .post-content h4 {
+    font-size: 1.5rem;
+    margin: 20px 0;
+    color: #999;
+  }
+  
+  .post-content h5 {
+    font-size: 1.25rem;
+    margin: 20px 0;
+    color: #bbb;
+  }
+  
+  .post-content h6 {
+    font-size: 1rem;
+    margin: 20px 0;
+    color: #ddd;
+  }
+  
+  .post-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin: 10px 0;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .post-content a {
+    color: crimson;
+    text-decoration: none;
+  }
+  
+  .post-content a:hover {
+    text-decoration: underline;
+  }
+  
+  .post-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin: 20px 0;
+  }
+  
+  .post-content ul, .post-content ol {
+    margin: 20px 0;
+    padding-left: 40px;
+  }
+  
+  .post-content li {
+    margin: 10px 0;
+  }
+  
+  .post-content em {
+    font-style: italic;
+  }
+  
+  .post-content strong {
+    font-weight: bold;
+  }
+  
+  .post-content pre {
+    background: #f5f5f5;
+    padding: 10px;
+    border-radius: 5px;
+    overflow-x: auto;
+  }
+  
+  .post-content code {
+    background: #f5f5f5;
+    padding: 2px 5px;
+    border-radius: 3px;
+  }
+  
+  
+  /* Mobile styles */
+@media (max-width: 768px) {
+    h1 {
+      font-size: 1.5rem; /* Adjusted font size for smaller screens */
+    }
+    
+    #img-div {
+      height: auto; /* Maintain aspect ratio */
+      margin-bottom: 10px; /* Reduce margin for smaller screens */
+      width: 100%; /* Full width for smaller screens */
+    }
+  
+    .post-meta {
+      flex-direction: column;
+      gap: 10px; /* Adjust gap between date/time and tags */
+      margin-bottom: 10px; /* Reduce margin for smaller screens */
+    }
+  
+    #blog-preview-date-time, #post-tags {
+      width: 100%;
+      justify-content: center;
+      font-size: 0.7rem; /* Further reduce font size */
+    }
+  
+    #blog-preview-date-time {
+      padding: 5px; /* Adjust padding for smaller screens */
+    }
+  
+    #post-tags {
+      padding: 5px; /* Adjust padding for smaller screens */
+    }
+  
+    #post-tags a {
+      margin-right: 3px; /* Adjust space between tags */
+      font-size: 0.7rem; /* Further reduce font size of tags */
+    }
+  
+    .post-content {
+      padding: 10px; /* Add padding for smaller screens */
+      max-width: 100%; /* Ensure content spans full width on small screens */
+    }
+  }

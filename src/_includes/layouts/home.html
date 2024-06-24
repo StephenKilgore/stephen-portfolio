@@ -1,0 +1,15 @@
+{% extends "layouts/base.html" %} 
+{% block content %}
+<div id="container">
+    <div id="content">
+        <h1>{{intro.name}}</h1>
+        <h2>{{intro.tagline | safe}}</h2>
+    </div>
+    <div id="social-container">
+        {% for item in socials.items %}
+            <a href="{{item.url}}"><img class="social-icon" src="{{item.icon}}" alt="{{item.text}}" /></a>
+        {% endfor %} 
+    </div>
+    {{content | safe}}
+</div>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+<div class="post">
+  <div id="img-div">
+    <img src="{{ image }}" alt="{{ title }}" class="post-image" />
+  </div>
+  <hr class="divider">
+  <h1>{{ title }}</h1>
+  <hr class="divider">
+  <div class="post-meta">
+    <div id="blog-preview-date-time">
+      <span class="icon"><i class="fas fa-calendar-alt"></i></span> {{ date }}
+      <span class="icon"><i class="fas fa-clock"></i></span> {{ rt }}
+    </div>
+    <div id="post-tags">
+      <span class="icon"><i class="fas fa-tags"></i></span>
+      {%- for tag in tags -%}
+        <a href="/tags/{{ tag | slug }}">{{ tag }}</a>{% if not loop.last %}<span style="color: crimson">,</span>{% endif %}
+      {%- endfor -%}
+    </div>
+  </div>
+  <div class="post-content">
+    {{ content | safe }}
+  </div>
+</div>
+{% endblock %}

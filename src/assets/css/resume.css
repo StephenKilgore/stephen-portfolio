@@ -1,0 +1,84 @@
+body {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 400;
+    font-size: 1rem; /* 16px */
+    color: #333;
+    line-height: 1.6;
+}
+
+h2 {
+    font-size: 2rem; /* Adjust size to be larger than h3 */
+    color: #333;
+    margin: 20px 0 10px;
+}
+
+h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin: 20px 0 10px;
+}
+
+p, li {
+    margin: 5px 0;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.resume-content ul li::before {
+    content: "•";
+    color: crimson;
+    display: inline-block; 
+    width: 1em;
+    margin-left: -1em;
+}
+
+a {
+    color: crimson;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.contact-info {
+    margin-bottom: 20px;
+}
+
+.certifications, .work-experience, .education, .skills {
+    margin-bottom: 40px;
+}
+
+.work-experience h4, .education h4, .skills h4 {
+    margin-bottom: 10px;
+}
+
+.certifications ul, .skills ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.certifications li, .skills li {
+    background-color: #f0f0f0;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+#resume-container
+{
+    margin-top: 100px;
+}
+
+@media (max-width: 768px) {
+    .work-experience h4, .education h4, .skills h4 {
+        font-size: 1.25rem;
+    }
+
+    .certifications ul, .skills ul {
+        flex-direction: column;
+        gap: 5px;
+    }
+}

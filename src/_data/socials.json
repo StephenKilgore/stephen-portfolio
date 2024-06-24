@@ -1,0 +1,20 @@
+{
+    "items": [
+      {
+        "text": "LinkedIn",
+        "url": "https://www.linkedin.com/in/stephenkilgore/",
+        "icon": "./assets/images/linkedin.png"
+      },
+      {
+        "text": "Github",
+        "url": "https://github.com/StephenKilgore",
+        "icon": "./assets/images/github.png"
+      },
+      {
+        "text": "Stack Overflow",
+        "url": "https://stackoverflow.com/users/25680915/stephen-kilgore",
+        "icon": "./assets/images/stackoverflow.png"
+      }
+    ]
+  }
+  
