@@ -67,9 +67,37 @@ a:hover {
     padding: 5px 10px;
     border-radius: 5px;
 }
-#resume-container
-{
+
+#resume-container {
     margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.resume-content {
+    width: 70%;
+    max-width: 800px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.resume-section {
+    margin-bottom: 20px;
+}
+
+.resume-section h3 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.resume-section img {
+    max-height: 2rem;
+    width: auto;
 }
 
 @media (max-width: 768px) {
@@ -80,5 +108,18 @@ a:hover {
     .certifications ul, .skills ul {
         flex-direction: column;
         gap: 5px;
+    }
+
+    .resume-content {
+        width: 90%;
+        padding: 10px;
+    }
+
+    .resume-section h3 {
+        font-size: 1.25rem;
+    }
+
+    .resume-section img {
+        max-height: 1.5rem;
     }
 }
