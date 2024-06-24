@@ -7,7 +7,7 @@
 }
 
 #blog-post-container article {
-    width: 60%; /* Adjust width to make it not take up the full width */
+    width: 70%; /* Increase width */
     margin-bottom: 50px;
     display: flex;
     justify-content: center;
@@ -24,34 +24,6 @@
     padding: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow for popping out effect */
 }
-h1 a {
-    color: black;
-    font-size: 1.5rem;
-    text-decoration: none;
-}
-h1 a:visited {
-    color: black;
-    font-size: 1.5rem;
-    text-decoration: none;
-
-}
-:-webkit-any-link {
-    color: black;
-    font-size: 1.5rem;
-    text-decoration: none;
-}
-
-:-moz-any-link {
-    color: black;
-    font-size: 1.5rem;
-    text-decoration: none;
-}
-
-:any-link {
-    color: black;
-    font-size: 1.5rem;
-    text-decoration: none;
-}
 
 article h1 {
     font-size: 2rem; /* Adjusted size */
@@ -61,6 +33,18 @@ article h1 {
 article p {
     font-size: 1.2rem;
     margin: 10px 0;
+}
+
+article h1 a {
+    color: black;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+article h1 a:visited {
+    color: black;
+    font-size: 1.5rem;
+    text-decoration: none;
+
 }
 
 #img-div {
@@ -99,12 +83,20 @@ article img {
     font-size: 0.9rem;
     flex-shrink: 0;
     max-width: 48%; /* Ensure the boxes don't stretch */
+    overflow: hidden; /* Prevent tags from escaping */
+    text-overflow: ellipsis; /* Handle overflow with ellipsis */
+}
+
+#post-tags {
+    white-space: nowrap; /* Ensure tags stay in one line */
+    overflow: hidden; /* Hide overflow */
+    text-overflow: ellipsis; /* Add ellipsis for overflow */
 }
 
 #post-tags a {
     color: black;
     text-decoration: none;
-    font-size: 1rem;
+    margin-right: 5px; /* Add some space between tags */
 }
 
 .icon {
@@ -116,12 +108,17 @@ article img {
 
 @media (max-width: 768px) {
     #blog-post-container article {
-        width: 100%;
-        padding: 20px;
+        width: 90%; /* Adjust width for mobile */
+        padding: 10px; /* Reduce padding for mobile */
+    }
+
+    .post-box {
+        padding: 10px; /* Reduce padding for mobile */
+        box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1); /* Adjust shadow for mobile */
     }
 
     article h1 {
-        font-size: 1.5rem; /* Adjusted size */
+        font-size: 1.5rem; /* Adjusted size for mobile */
         margin: 0;
     }
 
@@ -151,7 +148,8 @@ article img {
     }
 
     #post-tags {
-        flex-wrap: wrap;
+        white-space: normal; /* Allow tags to wrap */
+        overflow: visible; /* Show all tags */
     }
 
     /* Add a crimson divider between posts */
