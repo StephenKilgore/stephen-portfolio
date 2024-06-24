@@ -171,6 +171,7 @@ li a.active {
     #site-container {
         width: 100%;
         margin: 0;
+        padding: 0;
         padding-top: 10px;
         box-sizing: border-box; /* Include padding and border in element's total width and height */
         display: flex;
