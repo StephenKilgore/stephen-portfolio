@@ -7,28 +7,33 @@ h1 a, h1 a:link, h1 a:visited, h1 a:focus, h1 a:hover, h1 a:active {
 #blog-post-container {
     display: flex;
     flex-direction: column;
+    align-items: center;
     margin-top: 100px;
     width: 100%;
 }
 
 #blog-post-container article {
-    width: 100%;
+    width: 80%; /* Reduced width for better alignment */
+    max-width: 800px; /* Ensures it doesn't get too wide */
     margin-bottom: 50px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     box-sizing: border-box;
     padding: 40px;
+    border: 1px solid #ccc; /* Optional: add a border for better visual separation */
+    border-radius: 10px; /* Optional: rounded corners */
 }
 
 article h1 {
     font-size: 2.5rem;
-    margin: 10px 0; 
+    margin: 10px 0;
+    text-align: left; /* Ensure the title is aligned to the left */
 }
 
 article p {
     font-size: 1.2rem;
-    margin: 10px 0; 
+    margin: 10px 0;
 }
 
 #img-div {
@@ -39,7 +44,7 @@ article p {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 20px; 
+    margin-bottom: 20px;
 }
 
 article img {
@@ -51,32 +56,28 @@ article img {
 
 .post-meta {
     display: flex;
-    flex-direction: column;
     gap: 10px;
     width: 100%;
+    justify-content: space-between; /* Spread items across the full width */
+    flex-wrap: wrap;
     margin-bottom: 20px;
 }
 
-#blog-preview-date-time {
+#blog-preview-date-time,
+#post-tags {
     display: flex;
     align-items: center;
     gap: 10px;
     border: 3px solid black;
     padding: 10px;
     border-radius: 10px;
+    flex: 1;
+    flex-shrink: 0; /* Prevent these elements from growing too large */
     font-size: 0.9rem;
-    flex-shrink: 0; /* Prevent this element from growing */
 }
 
 #post-tags {
-    display: flex;
-    align-items: center;
-    gap: 1px;
-    border: 3px solid black;
-    padding: 10px;
-    border-radius: 10px;
     flex-wrap: wrap;
-    font-size: 0.9rem;
 }
 
 #post-tags a {
@@ -93,23 +94,22 @@ article img {
 
 @media (max-width: 768px) {
     #blog-post-container {
-        flex-direction: column;
-        align-items: center;
+        width: 100%;
     }
 
     #blog-post-container article {
-        width: 100%;
-        padding: 20px; 
+        width: 90%; /* Use more space on smaller screens */
+        padding: 20px;
     }
 
     article h1 {
         font-size: 2rem;
-        margin: 0; 
+        margin: 0;
     }
 
     article p {
         font-size: 1rem;
-        margin: 5px 0; 
+        margin: 5px 0;
     }
 
     article img {
@@ -122,13 +122,12 @@ article img {
     }
 
     .post-meta {
-        display: block; /* Make sure post-meta is displayed */
+        display: block; /* Ensure post-meta is displayed */
     }
 
-    #blog-preview-date-time {
-        flex-direction: row; /* Ensure date and time stay in one row */
-        justify-content: space-between;
-        width: 100%;
+    #blog-preview-date-time,
+    #post-tags {
+        width: auto; /* Adjust width to fit content */
         margin-bottom: 10px;
     }
 
@@ -142,7 +141,7 @@ article img {
     /* Add a crimson divider between posts */
     #blog-post-container article + article {
         border-top: 2px solid crimson;
-        padding-top: 20px; 
+        padding-top: 20px;
     }
 }
 
