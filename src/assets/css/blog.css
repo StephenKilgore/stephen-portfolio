@@ -1,6 +1,7 @@
 h1 a {
     font-size: 1.5rem;
     text-decoration: none;
+    color: black;
 }
 h1 a:visited {
     font-size: 1.5rem;
@@ -10,30 +11,30 @@ h1 a:visited {
 
 #blog-post-container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
     margin-top: 100px;
     width: 100%;
 }
 
 #blog-post-container article {
-    width: 48%;
+    width: 90%;
     margin-bottom: 50px;
     display: flex;
     flex-direction: column;
-    align-items: flex-start; 
+    align-items: flex-start;
     box-sizing: border-box;
-    padding: 40px; 
+    padding: 40px;
 }
 
 article h1 {
     font-size: 2.5rem;
-    margin: 10px 0; 
+    margin: 10px 0;
 }
 
 article p {
     font-size: 1.2rem;
-    margin: 10px 0; 
+    margin: 10px 0;
 }
 
 #img-div {
@@ -44,7 +45,7 @@ article p {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 20px; 
+    margin-bottom: 20px;
 }
 
 article img {
@@ -56,21 +57,22 @@ article img {
 
 .post-meta {
     display: flex;
-    gap: 20px; 
+    flex-wrap: wrap;
+    gap: 20px;
     width: 100%;
-    margin-bottom: 20px; 
+    margin-bottom: 20px;
 }
 
 #blog-preview-date-time {
     display: flex;
     align-items: center;
-    gap: 10px; 
+    gap: 10px;
     border: 3px solid black;
     padding: 10px;
     border-radius: 10px;
-    flex: 1;
-    flex-wrap: wrap; 
+    flex: none;
     font-size: 0.9rem;
+    flex-shrink: 0;
 }
 
 #post-tags {
@@ -81,61 +83,64 @@ article img {
     padding: 10px;
     border-radius: 10px;
     flex: 1;
-    flex-wrap: wrap; 
-    font-size: 0.9rem; 
+    flex-wrap: wrap;
+    font-size: 0.9rem;
 }
 
 #post-tags a {
-    color: black; 
+    color: black;
     text-decoration: none;
 }
 
 .icon {
-    color: crimson; 
-    margin-right: 5px; 
+    color: crimson;
+    margin-right: 5px;
     display: flex;
     align-items: center;
 }
 
 @media (max-width: 768px) {
     #blog-post-container {
-        flex-direction: column;
         align-items: center;
     }
 
     #blog-post-container article {
         width: 100%;
-        padding: 20px; 
+        padding: 20px;
     }
 
     article h1 {
         font-size: 2rem;
-        margin: 0; 
+        margin: 0;
     }
 
     article p {
         font-size: 1rem;
-        margin: 5px 0; 
+        margin: 5px 0;
     }
     article img {
         margin: 0;
     }
 
     #img-div {
-        height: 200px; 
-        margin-bottom: 10px; 
+        height: 200px;
+        margin-bottom: 10px;
     }
 
     .post-meta {
-        display: none; 
+        display: none;
     }
 
     /* Add a crimson divider between posts */
     #blog-post-container article + article {
         border-top: 2px solid crimson;
-        padding-top: 20px; 
+        padding-top: 20px;
     }
 }
-h2 a {
-    text-align: center;
+
+hr.divider {
+    border: none;
+    border-top: 2px solid crimson;
+    margin: 20px 0;
+    width: 90%;
 }
