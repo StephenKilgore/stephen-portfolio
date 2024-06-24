@@ -3,6 +3,23 @@ h1 a, h1 a:link, h1 a:visited, h1 a:focus, h1 a:hover, h1 a:active {
     text-decoration: none;
     color: black;
 }
+:-webkit-any-link {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: black;
+}
+
+:-moz-any-link {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: black;
+}
+
+:any-link {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: black;
+}
 
 
 #blog-post-container {
