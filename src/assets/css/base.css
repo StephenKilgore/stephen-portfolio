@@ -168,4 +168,13 @@ li a.active {
     h1 {
         font-size: 3rem; /* Adjusted font size for smaller screens */
     }
+    #site-container {
+        width: 100%;
+        margin: 0;
+        padding-top: 10px;
+        box-sizing: border-box; /* Include padding and border in element's total width and height */
+        display: flex;
+        flex-direction: column;
+        border:none;
+    }
 }

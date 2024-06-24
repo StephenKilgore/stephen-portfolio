@@ -165,12 +165,4 @@ article img {
         border-top: none;
         padding-top: 0;
     }
-    #site-container {
-        width: 100%;
-        margin: 0;
-        padding: 20px;
-        box-sizing: border-box; /* Include padding and border in element's total width and height */
-        display: flex;
-        flex-direction: column;
-    }
 }
