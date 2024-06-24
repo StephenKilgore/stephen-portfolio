@@ -12,13 +12,12 @@ h1 a:visited {
 #blog-post-container {
     display: flex;
     flex-direction: column;
-    align-items: center;
     margin-top: 100px;
     width: 100%;
 }
 
 #blog-post-container article {
-    width: 90%;
+    width: 100%;
     margin-bottom: 50px;
     display: flex;
     flex-direction: column;
@@ -29,12 +28,12 @@ h1 a:visited {
 
 article h1 {
     font-size: 2.5rem;
-    margin: 10px 0;
+    margin: 10px 0; 
 }
 
 article p {
     font-size: 1.2rem;
-    margin: 10px 0;
+    margin: 10px 0; 
 }
 
 #img-div {
@@ -45,7 +44,7 @@ article p {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 20px;
+    margin-bottom: 20px; 
 }
 
 article img {
@@ -57,8 +56,8 @@ article img {
 
 .post-meta {
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+    flex-direction: column;
+    gap: 10px;
     width: 100%;
     margin-bottom: 20px;
 }
@@ -70,9 +69,8 @@ article img {
     border: 3px solid black;
     padding: 10px;
     border-radius: 10px;
-    flex: none;
     font-size: 0.9rem;
-    flex-shrink: 0;
+    flex-shrink: 0; /* Prevent this element from growing */
 }
 
 #post-tags {
@@ -82,7 +80,6 @@ article img {
     border: 3px solid black;
     padding: 10px;
     border-radius: 10px;
-    flex: 1;
     flex-wrap: wrap;
     font-size: 0.9rem;
 }
@@ -101,23 +98,25 @@ article img {
 
 @media (max-width: 768px) {
     #blog-post-container {
+        flex-direction: column;
         align-items: center;
     }
 
     #blog-post-container article {
         width: 100%;
-        padding: 20px;
+        padding: 20px; 
     }
 
     article h1 {
         font-size: 2rem;
-        margin: 0;
+        margin: 0; 
     }
 
     article p {
         font-size: 1rem;
-        margin: 5px 0;
+        margin: 5px 0; 
     }
+
     article img {
         margin: 0;
     }
@@ -128,19 +127,30 @@ article img {
     }
 
     .post-meta {
-        display: none;
+        display: block; /* Make sure post-meta is displayed */
+    }
+
+    #blog-preview-date-time {
+        flex-direction: row; /* Ensure date and time stay in one row */
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    #post-tags {
+        flex-direction: row;
+        justify-content: flex-start;
+        width: 100%;
+        margin-bottom: 10px;
     }
 
     /* Add a crimson divider between posts */
     #blog-post-container article + article {
         border-top: 2px solid crimson;
-        padding-top: 20px;
+        padding-top: 20px; 
     }
 }
 
-hr.divider {
-    border: none;
-    border-top: 2px solid crimson;
-    margin: 20px 0;
-    width: 90%;
+h2 a {
+    text-align: center;
 }
