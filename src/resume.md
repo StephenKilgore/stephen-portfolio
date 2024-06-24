@@ -25,7 +25,7 @@ permalink: 'resume/index.html'
         **AWS Certified Solutions Architect-Associate**
     </li>
     <li>
-        <img src="/assets/images/certifications/ccna.png" alt="CCNA Logo">
+        <img src="/assets/images/certifications/ccna.jpeg" alt="CCNA Logo">
         **Cisco Certified Network Associate (CCNA)**
     </li>
 </ul>
@@ -40,7 +40,7 @@ permalink: 'resume/index.html'
 - Providing feature explanation and Salesforce coding best practices.
 - Mentoring and assisting Tier I Engineers.
 
-### <img src="/assets/images/companies/connor-group.png" alt="Connor Group Logo"> Connor Group (Nov 2022 – Sep 2023)
+### <img src="/assets/images/companies/connor-group.jpeg" alt="Connor Group Logo"> Connor Group (Nov 2022 – Sep 2023)
 
 **Salesforce Developer** (Remote)
 
@@ -72,7 +72,7 @@ permalink: 'resume/index.html'
 - Custom coded upsell/renewal process in Salesforce and NetSuite.
 - Designed and built a custom credit-card pre-authorization system.
 
-### <img src="/assets/images/companies/revolution-retail-systems.png" alt="Revolution Retail Systems Logo"> Revolution Retail Systems (March 2019 – Nov 2019)
+### <img src="/assets/images/companies/revolution-retail-systems.jpeg" alt="Revolution Retail Systems Logo"> Revolution Retail Systems (March 2019 – Nov 2019)
 
 **NetSuite Developer** (Carrollton, TX)
 
@@ -88,11 +88,11 @@ permalink: 'resume/index.html'
 
 <ul>
     <li>
-        <img src="/assets/images/education/cu-boulder.png" alt="University of Colorado-Boulder Logo">
+        <img src="/assets/images/education/cu.webp" alt="University of Colorado-Boulder Logo">
         **University of Colorado-Boulder**: Graduate Certificate, Artificial Intelligence (Expected 2026)
     </li>
     <li>
-        <img src="/assets/images/education/cu-boulder.png" alt="University of Colorado-Boulder Logo">
+        <img src="/assets/images/education/cu.webp" alt="University of Colorado-Boulder Logo">
         **University of Colorado-Boulder**: Master of Science, Computer Science (Expected 2026)
     </li>
     <li>
