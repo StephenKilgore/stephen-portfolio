@@ -1,184 +1,209 @@
 /* Common styles */
 
 #project-list-container {
-    margin-top:100px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+  width: 100%;
+  align-items: center; /* Center align the projects */
 }
-h1 {
-    font-size: 2.5rem;
-    margin: 20px 0;
-    text-align: center;
-    color: #333;
+
+.project-list {
+  width: 100%;
+}
+
+.project-item {
+  width: 70%; /* Increase width */
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+.post-box {
+  width: 100%;
+  max-width: 800px;
+  background: #fff;
+  border: 1px solid #ddd; /* Adjust border */
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow for popping out effect */
+}
+
+.project-item h2 {
+  font-size: 2rem; /* Adjusted size */
+  margin: 10px 0;
+  text-align: center;
+}
+
+.project-item p {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  text-align: center;
+}
+
+.project-item h2 a {
+  color: black;
+  font-size: 1.5rem;
+  text-decoration: none;
+  text-align: center;
+  display: block;
+}
+.project-item h2 a:visited {
+  color: black;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+.img-div {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.project-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.technologies {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.technologies ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.technologies li {
+  background-color: #f0f0f0;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.environment {
+  margin-top: 10px;
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.links .button {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: crimson;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.links .button:hover {
+  background-color: darkred;
+}
+
+.icon {
+  color: crimson;
+  margin-right: 5px;
+  display: flex;
+  align-items: center;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  #project-list-container {
+      margin-top: 50px;
   }
-  
-  h2 a {
-    font-size: 2rem;
-    color: #333;
-    text-decoration: none;
-    text-align: center;
-    display: block;
+
+  .project-item {
+      width: 100%; /* Maximize width for mobile */
+      padding: 10px; /* Reduce padding for mobile */
   }
-  
-  h2 a:hover {
-    text-decoration: underline;
+
+  .post-box {
+      padding: 10px; /* Reduce padding for mobile */
+      box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1); /* Adjust shadow for mobile */
   }
-  
-  p {
-    font-size: 1.2rem;
-    margin: 10px 0;
-    text-align: center;
+
+  .project-item h2 {
+      font-size: 1.5rem; /* Adjusted size for mobile */
+      margin: 0;
   }
-  
-  .img-div {
-    width: 100%;
-    height: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 20px;
+
+  .project-item p {
+      font-size: 1rem;
+      margin: 5px 0;
   }
-  
+
   .project-image {
-    width: 100%;
-    max-width: 600px;
-    height: auto;
-    border-radius: 20px;
-    object-fit: cover;
-    margin: 0 auto;
+      margin: 0;
   }
-  
-  /* Stylized divider */
-  .divider {
-    border: none;
-    border-top: 3px solid black;
-    margin: 20px 0;
-    width: 100%;
-    max-width: 600px;
-    margin: 20px auto;
-  }
-  
-  /* Crimson divider */
-  .crimson-divider {
-    border: none;
-    border-top: 3px solid crimson;
-    margin: 40px 0;
-    width: 100%;
-    max-width: 100%;
-  }
-  
-  .project-meta {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    width: 100%;
-    margin-bottom: 50px;
-    text-align: center;
-  }
-  
-  .technologies {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-  }
-  
-  .technologies ul {
-    list-style-type: none;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-  
-  .technologies li {
-    background-color: #f0f0f0;
-    padding: 5px 10px;
-    border-radius: 5px;
-  }
-  
-  .environment {
-    margin-top: 10px;
-    padding: 10px;
-    border: 2px solid black;
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .links {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 20px;
-    flex-wrap: wrap;
-  }
-  
-  .links .button {
-    display: inline-block;
-    margin: 10px;
-    padding: 10px 20px;
-    background-color: crimson;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-  }
-  
-  .links .button:hover {
-    background-color: darkred;
-  }
-  
-  .icon {
-    color: crimson;
-    margin-right: 5px;
-    display: flex;
-    align-items: center;
-  }
-  
-  .blog-post-link .button {
-    display: inline-block;
-    margin: 10px;
-    padding: 10px 20px;
-    background-color: crimson;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-  }
-  
-  .blog-post-link .button:hover {
-    background-color: darkred;
-  }
-  
-  /* Mobile styles */
-  @media (max-width: 768px) {
-    .project-item {
-      width: 100%;
-    }
-  
-    .img-div {
-      height: auto;
+
+  .img-div {
+      height: 200px;
       margin-bottom: 10px;
+  }
+
+  .project-meta {
+      flex-direction: column;
+      align-items: flex-start;
       width: 100%;
-    }
-  
-    h2 a {
-      font-size: 1.5rem;
-    }
-  
-    .links {
+  }
+
+  .links {
       flex-direction: column;
       align-items: center;
-    }
-  
-    .links .button {
+  }
+
+  .links .button {
       width: 80%;
       max-width: 250px;
       padding: 8px 16px;
-    }
-  
-    .technologies ul {
-      justify-content: center;
-    }
   }
-  
+
+  .technologies ul {
+      justify-content: center;
+  }
+
+  /* Remove the crimson divider between projects */
+  .project-item + .project-item {
+      border-top: none;
+      padding-top: 0;
+  }
+}
