@@ -1,7 +1,6 @@
 ---
-title: "Western Governors University: Master's of Business Administration, IT Management"
+school: 'Western Governors University'
+degree: 'Master of Business Administration, IT Management'
 logo: '/assets/images/education/wgu.png'
-date: ''
+dateRange: ''
 ---
-
-**Western Governors University**: Master's of Business Administration, IT Management

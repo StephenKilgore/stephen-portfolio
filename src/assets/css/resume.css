@@ -23,16 +23,12 @@ p, li {
 }
 
 ul {
-    list-style-type: none;
+    list-style-type: none; /* Remove bullet points */
     padding: 0;
 }
 
 .resume-content ul li::before {
-    content: "•";
-    color: crimson;
-    display: inline-block; 
-    width: 1em;
-    margin-left: -1em;
+    content: none; /* Remove bullet points */
 }
 
 a {
@@ -50,10 +46,6 @@ a:hover {
 
 .certifications, .work-experience, .education, .skills {
     margin-bottom: 40px;
-}
-
-.work-experience h4, .education h4, .skills h4 {
-    margin-bottom: 10px;
 }
 
 .certifications ul, .skills ul {
@@ -76,8 +68,8 @@ a:hover {
 }
 
 .resume-content {
-    width: 70%;
-    max-width: 800px;
+    width: 90%; /* Increase width of the resume box */
+    max-width: 1000px;
     background: #fff;
     border: 1px solid #ddd;
     border-radius: 10px;
@@ -96,15 +88,19 @@ a:hover {
 }
 
 .resume-section img.certification-logo {
-    max-height: 6rem; /* Triple size for certification logos */
+    max-height: 6rem; /* Increase size for certification logos */
     width: auto;
     vertical-align: middle; /* Align with the middle of the text */
 }
 
 .resume-section img.company-logo, .resume-section img.education-logo {
-    max-height: 4rem; /* Double size for company and education logos */
+    max-height: 6rem; /* Increase size for company and education logos */
     width: auto;
     vertical-align: middle; /* Align with the middle of the text */
+}
+
+.job-description {
+    margin-left: 2rem; /* Indent bullet points under job title */
 }
 
 @media (max-width: 768px) {
@@ -131,6 +127,6 @@ a:hover {
     }
 
     .resume-section img.company-logo, .resume-section img.education-logo {
-        max-height: 3rem;
+        max-height: 4rem;
     }
 }

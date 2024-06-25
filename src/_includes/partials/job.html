@@ -1,4 +1,6 @@
 <div class="resume-section">
   <h3><img src="{{ job.data.logo }}" alt="{{ job.data.title }}" class="company-logo"> {{ job.data.title }} ({{ job.data.dateRange }})</h3>
-  {{ job.templateContent | safe }}
+  <div class="job-description">
+    {{ job.templateContent | safe }}
+  </div>
 </div>

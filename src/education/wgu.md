@@ -1,7 +1,6 @@
 ---
-title: "Western Governors University: Bachelor's Degree, Software Development"
+school: 'Western Governors University'
+degree: 'Bachelor of Science, Software Development'
 logo: '/assets/images/education/wgu.png'
-date: ''
+dateRange: ''
 ---
-
-**Western Governors University**: Bachelor's Degree, Computer Science

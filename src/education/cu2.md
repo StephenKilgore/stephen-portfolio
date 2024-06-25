@@ -1,7 +1,6 @@
 ---
-title: "University of Colorado-Boulder: Master's Degree, Computer Science"
-logo: '/assets/images/education/wgu.png'
-date: ''
+school: 'University of Colorado-Boulder'
+degree: 'Graduate Certificate, Artificial Intelligence'
+logo: '/assets/images/education/cu.webp'
+dateRange: 'Expected 2026'
 ---
-
-**University of Colorado-Boulder**: Graduate Certificate, Artificial Intelligence
