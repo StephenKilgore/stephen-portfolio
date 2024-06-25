@@ -50,9 +50,9 @@ a:hover {
 
 .certifications {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Ensure grid fills row from left to right */
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Ensure grid fills row from left to right */
     gap: 10px; /* Reduce gap for more compact layout */
-    justify-items: center;
+    justify-items: start; /* Align items to the start of the grid cell */
 }
 
 .certifications .resume-section {
