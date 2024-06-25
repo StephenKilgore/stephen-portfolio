@@ -50,7 +50,7 @@ a:hover {
 
 .certifications ul {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Ensure grid fills row from left to right */
     gap: 20px;
     justify-items: center;
 }
@@ -119,7 +119,7 @@ a:hover {
     }
 
     .certifications ul {
-        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjust for mobile */
     }
 
     .resume-content {
