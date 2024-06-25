@@ -33,41 +33,46 @@
   document.addEventListener("DOMContentLoaded", function() {
     const tocContainer = document.getElementById("table-of-contents");
     const postContent = document.querySelector(".post-content");
-    const headers = postContent.querySelectorAll("h1, h2, h3, h4, h5, h6");
 
-    if (headers.length > 0) {
-      let tocList = document.createElement("ul");
-      let lastLevel = 1;
-      let lastList = tocList;
+    if (tocContainer && postContent) {
+      const headers = postContent.querySelectorAll("h1, h2, h3, h4, h5, h6");
 
-      headers.forEach((header, index) => {
-        header.id = "toc-" + index;
-        const level = parseInt(header.tagName.charAt(1));
+      if (headers.length > 0) {
+        let tocList = document.createElement("ul");
+        let lastLevel = 1;
+        let lastList = tocList;
 
-        let tocItem = document.createElement("li");
-        let tocLink = document.createElement("a");
-        tocLink.href = "#" + header.id;
-        tocLink.textContent = header.textContent;
-        tocItem.appendChild(tocLink);
+        headers.forEach((header, index) => {
+          header.id = "toc-" + index;
+          const level = parseInt(header.tagName.charAt(1));
 
-        if (level > lastLevel) {
-          const newList = document.createElement("ul");
-          lastList.lastChild.appendChild(newList);
-          lastList = newList;
-        } else if (level < lastLevel) {
-          lastList = tocList;
-          for (let i = 1; i < level; i++) {
-            lastList = lastList.lastChild.lastChild;
+          let tocItem = document.createElement("li");
+          let tocLink = document.createElement("a");
+          tocLink.href = "#" + header.id;
+          tocLink.textContent = header.textContent;
+          tocItem.appendChild(tocLink);
+
+          if (level > lastLevel) {
+            const newList = document.createElement("ul");
+            lastList.lastChild.appendChild(newList);
+            lastList = newList;
+          } else if (level < lastLevel) {
+            lastList = tocList;
+            for (let i = 1; i < level; i++) {
+              if (lastList.lastChild && lastList.lastChild.lastChild) {
+                lastList = lastList.lastChild.lastChild;
+              }
+            }
           }
-        }
 
-        lastList.appendChild(tocItem);
-        lastLevel = level;
-      });
+          lastList.appendChild(tocItem);
+          lastLevel = level;
+        });
 
-      tocContainer.appendChild(tocList);
-    } else {
-      tocContainer.style.display = "none"; // Hide ToC if no headers found
+        tocContainer.appendChild(tocList);
+      } else {
+        tocContainer.style.display = "none"; // Hide ToC if no headers found
+      }
     }
   });
 </script>
