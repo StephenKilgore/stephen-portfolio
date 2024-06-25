@@ -50,8 +50,8 @@ a:hover {
 
 .certifications {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Ensure grid fills row from left to right */
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Ensure grid fills row from left to right */
+    gap: 10px; /* Reduce gap for more compact layout */
     justify-items: center;
 }
 
