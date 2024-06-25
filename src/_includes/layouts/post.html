@@ -20,8 +20,38 @@
       {%- endfor -%}
     </div>
   </div>
+  <div id="toc-container">
+    <h2>Table of Contents</h2>
+    <nav id="table-of-contents"></nav>
+  </div>
   <div class="post-content">
     {{ content | safe }}
   </div>
 </div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const tocContainer = document.getElementById("table-of-contents");
+    const postContent = document.querySelector(".post-content");
+    const headers = postContent.querySelectorAll("h1, h2, h3, h4, h5, h6");
+
+    if (headers.length > 0) {
+      let tocList = document.createElement("ul");
+
+      headers.forEach((header, index) => {
+        header.id = "toc-" + index;
+        let tocItem = document.createElement("li");
+        let tocLink = document.createElement("a");
+        tocLink.href = "#" + header.id;
+        tocLink.textContent = header.textContent;
+        tocItem.appendChild(tocLink);
+        tocList.appendChild(tocItem);
+      });
+
+      tocContainer.appendChild(tocList);
+    } else {
+      tocContainer.style.display = "none"; // Hide ToC if no headers found
+    }
+  });
+</script>
 {% endblock %}
