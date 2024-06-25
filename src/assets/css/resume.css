@@ -48,16 +48,17 @@ a:hover {
     margin-bottom: 40px;
 }
 
-.certifications ul, .skills ul {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
+.certifications ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 20px;
+    justify-items: center;
 }
 
-.certifications li, .skills li {
-    background-color: #f0f0f0;
-    padding: 5px 10px;
-    border-radius: 5px;
+.certifications li {
+    background-color: transparent;
+    padding: 0;
+    border-radius: 0;
 }
 
 #resume-container {
@@ -88,13 +89,13 @@ a:hover {
 }
 
 .resume-section img.certification-logo {
-    max-height: 6rem; /* Increase size for certification logos */
+    max-height: 8rem; /* Increase size for certification logos */
     width: auto;
     vertical-align: middle; /* Align with the middle of the text */
 }
 
 .resume-section img.company-logo, .resume-section img.education-logo {
-    max-height: 6rem; /* Increase size for company and education logos */
+    max-height: 4rem; /* Slightly smaller size for company and education logos */
     width: auto;
     vertical-align: middle; /* Align with the middle of the text */
 }
@@ -103,14 +104,22 @@ a:hover {
     margin-left: 2rem; /* Indent bullet points under job title */
 }
 
+.job-description ul {
+    list-style-type: disc;
+    padding-left: 1.5rem; /* Ensure bullet points are indented */
+}
+
+.job-description ul li {
+    margin-left: 1rem; /* Indent the bullet points themselves */
+}
+
 @media (max-width: 768px) {
     .work-experience h4, .education h4, .skills h4 {
         font-size: 1.25rem;
     }
 
-    .certifications ul, .skills ul {
-        flex-direction: column;
-        gap: 5px;
+    .certifications ul {
+        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
     }
 
     .resume-content {
@@ -123,10 +132,10 @@ a:hover {
     }
 
     .resume-section img.certification-logo {
-        max-height: 4rem;
+        max-height: 6rem;
     }
 
     .resume-section img.company-logo, .resume-section img.education-logo {
-        max-height: 4rem;
+        max-height: 3rem;
     }
 }
