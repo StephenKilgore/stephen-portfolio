@@ -15,9 +15,11 @@ permalink: 'resume/index.html'
 
 ## Certifications
 
+<div class="certifications">
 {% for certification in collections.certifications %}
-{% include "partials/certification.html" %}
+    {% include "partials/certification.html" %}
 {% endfor %}
+</div>
 
 ## Work Experience
 

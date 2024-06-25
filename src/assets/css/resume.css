@@ -48,14 +48,14 @@ a:hover {
     margin-bottom: 40px;
 }
 
-.certifications ul {
+.certifications {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Ensure grid fills row from left to right */
     gap: 20px;
     justify-items: center;
 }
 
-.certifications li {
+.certifications .resume-section {
     background-color: transparent;
     padding: 0;
     border-radius: 0;
@@ -118,7 +118,7 @@ a:hover {
         font-size: 1.25rem;
     }
 
-    .certifications ul {
+    .certifications {
         grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Adjust for mobile */
     }
 
