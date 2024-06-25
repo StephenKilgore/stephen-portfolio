@@ -13,9 +13,7 @@ module.exports = config => {
   config.addCollection("education", function(collectionApi) {
     return collectionApi.getFilteredByGlob("src/education/*.md").sort((a, b) => {
       return b.data.sortOrder - a.data.sortOrder;
-    }).filter((post) => {
-      return post.data.visible == 'true';
-    });
+    })
   });
   // Collection to get unique tags
   config.addCollection("tagList", function(collection) {
@@ -36,7 +34,7 @@ module.exports = config => {
   config.addCollection("postsByTag", function(collection) {
     let tags = {};
     collection.getAll().forEach(item => {
-      if ("tags" in item.data) {
+      if ("tags" in item.data && item.data.visible == 'true') {
         item.data.tags.forEach(tag => {
           if (!tags[tag]) {
             tags[tag] = [];
@@ -54,7 +52,9 @@ module.exports = config => {
     config.addWatchTarget("./src/assets");
     // Returns a collection of blog posts in reverse date order
     config.addCollection('posts', collection => {
-      return [...collection.getFilteredByGlob('./src/posts/*.md')].reverse();
+      return [...collection.getFilteredByGlob('./src/posts/*.md')].reverse().filter((post) => {
+        return post.data.visible == 'true';
+      });;
     });
     config.addCollection('projects', collection => {
       return [...collection.getFilteredByGlob('./src/projects/*.md')].reverse();
