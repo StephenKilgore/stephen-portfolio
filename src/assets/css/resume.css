@@ -4,6 +4,7 @@ body {
     font-size: 1rem; /* 16px */
     color: #333;
     line-height: 1.6;
+    margin-bottom: 10px;
 }
 
 h2 {
@@ -80,7 +81,7 @@ a:hover {
 }
 
 .resume-section {
-    margin-bottom: 100px;
+    margin-bottom: 75px;
 }
 
 .resume-section h3 {
