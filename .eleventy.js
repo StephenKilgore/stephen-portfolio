@@ -18,7 +18,7 @@ module.exports = config => {
   // Collection to get unique tags
   config.addCollection("tagList", function(collection) {
     let tagSet = new Set();
-    collection.getAll().forEach(item => {
+    collection.getFilteredByGlob("src/posts/*.md").forEach(item => {
       if ("tags" in item.data) {
         let tags = item.data.tags;
         tags = tags.filter(tag => !["all", "nav", "post", "posts"].includes(tag));
@@ -33,7 +33,7 @@ module.exports = config => {
   // Collection to group posts by tags
   config.addCollection("postsByTag", function(collection) {
     let tags = {};
-    collection.getAll().forEach(item => {
+    collection.getFilteredByGlob("src/posts/*.md").forEach(item => {
       if ("tags" in item.data && item.data.visible == 'true') {
         item.data.tags.forEach(tag => {
           if (!tags[tag]) {
