@@ -233,6 +233,7 @@ p {
 
 #table-of-contents a {
   color: crimson;
+  font-weight: normal;
   text-decoration: none;
 }
 
