@@ -1,17 +1,17 @@
 module.exports = config => {
-  config.addCollection("certifications", function(collectionApi) {
-    return collectionApi.getFilteredByGlob("src/certifications/*.md").sort((a, b) => {
+  config.addCollection("certifications", function(collection) {
+    return collection.getFilteredByGlob("src/certifications/*.md").sort((a, b) => {
       return a.data.sortOrder - b.data.sortOrder;
     });
   });
-  config.addCollection("jobs", function(collectionApi) {
-    return collectionApi.getFilteredByGlob("src/jobs/*.md").sort((a, b) => {
+  config.addCollection("jobs", function(collection) {
+    return collection.getFilteredByGlob("src/jobs/*.md").sort((a, b) => {
       return b.data.sortOrder - a.data.sortOrder;
     });
   });
 
-  config.addCollection("education", function(collectionApi) {
-    return collectionApi.getFilteredByGlob("src/education/*.md").sort((a, b) => {
+  config.addCollection("education", function(collection) {
+    return collection.getFilteredByGlob("src/education/*.md").sort((a, b) => {
       return b.data.sortOrder - a.data.sortOrder;
     })
   });
