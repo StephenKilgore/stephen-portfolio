@@ -1,4 +1,15 @@
 module.exports = config => {
+  config.addCollection("certifications", function(collectionApi) {
+    return collectionApi.getFilteredByGlob("src/certifications/*.md");
+  });
+
+  config.addCollection("jobs", function(collectionApi) {
+    return collectionApi.getFilteredByGlob("src/jobs/*.md");
+  });
+
+  config.addCollection("education", function(collectionApi) {
+    return collectionApi.getFilteredByGlob("src/education/*.md");
+  });
   // Collection to get unique tags
   config.addCollection("tagList", function(collection) {
     let tagSet = new Set();
