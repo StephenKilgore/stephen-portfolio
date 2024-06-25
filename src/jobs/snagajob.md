@@ -1,7 +1,7 @@
 ---
 title: 'Snagajob'
 position: 'Manager, Financial Systems / NetSuite Developer'
-date: 'Nov 2019 – March 2022'
+dateRange: 'Nov 2019 – March 2022'
 location: 'Remote'
 logo: '/assets/images/companies/snagajob.png'
 ---

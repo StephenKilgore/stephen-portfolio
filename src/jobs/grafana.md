@@ -1,7 +1,7 @@
 ---
 title: 'Grafana Labs'
 position: 'Senior Finance Systems Administrator'
-date: 'July 2022 – Nov 2022'
+dateRange: 'July 2022 – Nov 2022'
 location: 'Remote'
 logo: '/assets/images/companies/grafana.png'
 ---

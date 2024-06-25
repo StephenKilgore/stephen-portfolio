@@ -1,7 +1,7 @@
 ---
 title: 'Ziosk'
 position: 'Developer, IT Applications'
-date: 'March 2018 – March 2019'
+dateRange: 'March 2018 – March 2019'
 location: 'Dallas, TX'
 logo: '/assets/images/companies/ziosk.png'
 ---

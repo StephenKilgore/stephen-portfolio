@@ -1,7 +1,7 @@
 ---
 title: 'Connor Group'
 position: 'Salesforce Developer'
-date: 'Nov 2022 – Sep 2023'
+dateRange: 'Nov 2022 – Sep 2023'
 location: 'Remote'
 logo: '/assets/images/companies/connor-group.jpeg'
 ---

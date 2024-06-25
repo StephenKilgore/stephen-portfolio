@@ -1,7 +1,7 @@
 ---
 title: 'Vursor (SystemsAccountants)'
 position: 'Senior NetSuite Development Consultant'
-date: 'July 2022 – Nov 2022'
+dateRange: 'July 2022 – Nov 2022'
 location: 'Remote'
 logo: '/assets/images/companies/vursor.png'
 ---

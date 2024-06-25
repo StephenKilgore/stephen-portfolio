@@ -1,7 +1,7 @@
 ---
 title: 'Salesforce'
 position: 'Senior Developer Support Engineer – GovCloud'
-date: 'Sep 2023 – Present'
+dateRange: 'Sep 2023 – Present'
 location: 'Remote'
 logo: '/assets/images/companies/salesforce.png'
 ---
