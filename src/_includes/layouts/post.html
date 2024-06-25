@@ -40,13 +40,13 @@
     console.log("Post Content:", postContent);
 
     if (tocContainer && postContent) {
-      const headers = postContent.querySelectorAll("h1, h2, h3, h4, h5, h6");
+      const headers = postContent.querySelectorAll("h2, h3, h4");
 
       console.log("Headers found:", headers.length);
 
       if (headers.length > 0) {
         let tocList = document.createElement("ul");
-        let lastLevel = 1;
+        let lastLevel = 2;
         let lastList = tocList;
 
         headers.forEach((header, index) => {
@@ -71,7 +71,7 @@
             }
           } else if (level < lastLevel) {
             lastList = tocList;
-            for (let i = 1; i < level; i++) {
+            for (let i = 2; i < level; i++) {
               if (lastList.lastChild && lastList.lastChild.lastChild) {
                 lastList = lastList.lastChild.lastChild;
               }
