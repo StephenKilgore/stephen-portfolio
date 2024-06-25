@@ -4,11 +4,15 @@ module.exports = config => {
   });
 
   config.addCollection("jobs", function(collectionApi) {
-    return collectionApi.getFilteredByGlob("src/jobs/*.md");
+    return collectionApi.getFilteredByGlob("src/jobs/*.md").sort((a, b) => {
+      return a.data.sortOrder - b.data.sortOrder;
+    });
   });
 
   config.addCollection("education", function(collectionApi) {
-    return collectionApi.getFilteredByGlob("src/education/*.md");
+    return collectionApi.getFilteredByGlob("src/education/*.md").sort((a, b) => {
+      return a.data.sortOrder - b.data.sortOrder;
+    });
   });
   // Collection to get unique tags
   config.addCollection("tagList", function(collection) {

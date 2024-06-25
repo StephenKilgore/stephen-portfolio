@@ -4,6 +4,7 @@ position: 'Senior Finance Systems Administrator'
 dateRange: 'July 2022 – Nov 2022'
 location: 'Remote'
 logo: '/assets/images/companies/grafana.png'
+sortOrder: 4
 ---
 
 **Senior Finance Systems Administrator** (Remote)

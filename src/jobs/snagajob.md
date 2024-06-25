@@ -4,6 +4,7 @@ position: 'Manager, Financial Systems / NetSuite Developer'
 dateRange: 'Nov 2019 – March 2022'
 location: 'Remote'
 logo: '/assets/images/companies/snagajob.png'
+sortOrder: 3
 ---
 
 **Manager, Financial Systems / NetSuite Developer** (Remote)
