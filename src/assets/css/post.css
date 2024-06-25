@@ -240,6 +240,11 @@ p {
   text-decoration: underline;
 }
 
+/* Indentation for nested ToC items */
+#table-of-contents ul ul {
+  margin-left: 20px;
+}
+
 /* Mobile styles */
 @media (max-width: 768px) {
   h1 {

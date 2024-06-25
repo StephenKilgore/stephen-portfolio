@@ -37,15 +37,32 @@
 
     if (headers.length > 0) {
       let tocList = document.createElement("ul");
+      let lastLevel = 1;
+      let lastList = tocList;
 
       headers.forEach((header, index) => {
         header.id = "toc-" + index;
+        const level = parseInt(header.tagName.charAt(1));
+
         let tocItem = document.createElement("li");
         let tocLink = document.createElement("a");
         tocLink.href = "#" + header.id;
         tocLink.textContent = header.textContent;
         tocItem.appendChild(tocLink);
-        tocList.appendChild(tocItem);
+
+        if (level > lastLevel) {
+          const newList = document.createElement("ul");
+          lastList.lastChild.appendChild(newList);
+          lastList = newList;
+        } else if (level < lastLevel) {
+          lastList = tocList;
+          for (let i = 1; i < level; i++) {
+            lastList = lastList.lastChild.lastChild;
+          }
+        }
+
+        lastList.appendChild(tocItem);
+        lastLevel = level;
       });
 
       tocContainer.appendChild(tocList);
