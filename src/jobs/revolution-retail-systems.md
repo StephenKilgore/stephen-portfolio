@@ -3,7 +3,7 @@ title: 'Revolution Retail Systems'
 position: 'NetSuite Developer'
 dateRange: 'March 2019 – Nov 2019'
 location: 'Carrollton, TX'
-logo: '/assets/images/companies/revolution-retail-systems.png'
+logo: '/assets/images/companies/revolution-retail-systems.jpeg'
 ---
 
 **NetSuite Developer** (Carrollton, TX)
