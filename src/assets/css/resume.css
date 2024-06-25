@@ -95,8 +95,14 @@ a:hover {
     gap: 10px;
 }
 
-.resume-section img {
-    max-height: 1.5rem; /* Uniform size for all logos */
+.resume-section img.certification-logo {
+    max-height: 6rem; /* Triple size for certification logos */
+    width: auto;
+    vertical-align: middle; /* Align with the middle of the text */
+}
+
+.resume-section img.company-logo, .resume-section img.education-logo {
+    max-height: 4rem; /* Double size for company and education logos */
     width: auto;
     vertical-align: middle; /* Align with the middle of the text */
 }
@@ -120,7 +126,11 @@ a:hover {
         font-size: 1.25rem;
     }
 
-    .resume-section img {
-        max-height: 1.25rem;
+    .resume-section img.certification-logo {
+        max-height: 4rem;
+    }
+
+    .resume-section img.company-logo, .resume-section img.education-logo {
+        max-height: 3rem;
     }
 }

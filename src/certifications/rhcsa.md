@@ -1,0 +1,6 @@
+---
+title: 'Red Hat Certified System Administrator (RHCSA)'
+logo: '/assets/images/certifications/rhcsa.png'
+---
+
+**Red Hat Certified System Administrator (RHCSA)**
