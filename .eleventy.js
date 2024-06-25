@@ -13,6 +13,8 @@ module.exports = config => {
   config.addCollection("education", function(collectionApi) {
     return collectionApi.getFilteredByGlob("src/education/*.md").sort((a, b) => {
       return b.data.sortOrder - a.data.sortOrder;
+    }).filter((post) => {
+      post.data.visible == 'true';
     });
   });
   // Collection to get unique tags
