@@ -1,5 +1,38 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+<div class="post">
+  <div id="img-div">
+    <img src="{{ image }}" alt="{{ title }}" class="post-image" />
+  </div>
+  <hr class="divider">
+  <h1>{{ title }}</h1>
+  <hr class="divider">
+  <div class="post-meta">
+    <div id="blog-preview-date-time">
+      <span class="icon"><i class="fas fa-calendar-alt"></i></span> {{ date }}
+      <span class="icon"><i class="fas fa-clock"></i></span> {{ rt }}
+    </div>
+    <div id="post-tags">
+      <span class="icon"><i class="fas fa-tags"></i></span>
+      {%- for tag in tags -%}
+        <a href="/tags/{{ tag | slug }}">{{ tag }}</a>{% if not loop.last %}<span style="color: crimson">,</span>{% endif %}
+      {%- endfor -%}
+    </div>
+  </div>
+  <div id="toc-container">
+    <h2>Table of Contents</h2>
+    <nav id="table-of-contents"></nav>
+  </div>
+  <div class="post-content">
+    {{ content | safe }}
+  </div>
+</div>
+
 <script>
   document.addEventListener("DOMContentLoaded", function() {
+    console.log("DOM fully loaded and parsed");
+
     const tocContainer = document.getElementById("table-of-contents");
     const postContent = document.querySelector(".post-content");
 
@@ -58,3 +91,4 @@
     }
   });
 </script>
+{% endblock %}
