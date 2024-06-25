@@ -69,8 +69,8 @@ a:hover {
 }
 
 .resume-content {
-    width: 90%; /* Increase width of the resume box */
-    max-width: 1000px;
+    width: 95%; /* Increase width of the resume box */
+    max-width: 1200px;
     background: #fff;
     border: 1px solid #ddd;
     border-radius: 10px;

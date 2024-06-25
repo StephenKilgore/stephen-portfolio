@@ -1,5 +1,8 @@
 <div class="resume-section">
-  <h3><img src="{{ education.data.logo }}" alt="{{ education.data.school }}" class="education-logo"> {{ education.data.school }} ({{ education.data.dateRange }})</h3>
+  <h3>
+    <img src="{{ education.data.logo }}" alt="{{ education.data.school }}" class="education-logo">
+    {{ education.data.school }}{% if education.data.dateRange %} ({{ education.data.dateRange }}){% endif %}
+  </h3>
   <div class="job-description">
     <strong>{{ education.data.degree }}</strong>
   </div>
