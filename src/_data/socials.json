@@ -11,6 +11,11 @@
         "icon": "./assets/images/github.png"
       },
       {
+        "text": "Docker Hub",
+        "url": "https://hub.docker.com/u/stephenkilgore",
+        "icon": "./assets/images/docker.webp"
+      },
+      {
         "text": "Stack Overflow",
         "url": "https://stackoverflow.com/users/25680915/stephen-kilgore",
         "icon": "./assets/images/stackoverflow.png"
