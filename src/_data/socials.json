@@ -19,6 +19,11 @@
         "text": "Stack Overflow",
         "url": "https://stackoverflow.com/users/25680915/stephen-kilgore",
         "icon": "./assets/images/stackoverflow.png"
+      },
+      {
+        "text": "Trailhead",
+        "url": "https://www.salesforce.com/trailblazer/stephenkilgore",
+        "icon": "./assets/images/trailhead.png"
       }
     ]
   }
