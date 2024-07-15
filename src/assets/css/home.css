@@ -52,12 +52,12 @@ h1 {
     min-height: 700px;
 }
 #container a {
-    color: crimson;
+    color: #00A1E0;
     text-decoration: none;
 }
 #container a:visited {
 
-    color: crimson;
+    color: #00A1E0;
     text-decoration: none;
     
 }

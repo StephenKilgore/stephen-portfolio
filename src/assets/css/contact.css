@@ -45,7 +45,7 @@ h1 {
 .contact-form button {
     padding: 10px;
     font-size: 1rem;
-    background-color: crimson;
+    background-color: #00A1E0;
     color: white;
     border: none;
     border-radius: 5px;
@@ -54,7 +54,7 @@ h1 {
 }
 
 .contact-form button:hover {
-    background-color: darkred;
+    background-color: #00A1E0;
 }
 
 /* Mobile styles */

@@ -94,7 +94,7 @@ p {
 }
 
 .icon {
-  color: crimson; /* Set the icon color to crimson */
+  color: #00A1E0; 
   margin-right: 5px; /* Space between icon and text */
   display: flex;
   align-items: center;
@@ -160,7 +160,7 @@ p {
 }
 
 .post-content a {
-  color: crimson;
+  color: #00A1E0;
   text-decoration: none;
 }
 
@@ -232,7 +232,7 @@ p {
 }
 
 #table-of-contents a {
-  color: crimson;
+  color: #00A1E0;
   font-weight: normal;
   text-decoration: none;
 }

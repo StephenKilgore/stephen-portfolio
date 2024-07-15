@@ -134,7 +134,7 @@ li a {
 
 li a.active {
     text-decoration: underline;
-    text-decoration-color: crimson;
+    text-decoration-color: #00A1E0;
     text-decoration-thickness: 5px;
     text-underline-offset: 10px;
 }

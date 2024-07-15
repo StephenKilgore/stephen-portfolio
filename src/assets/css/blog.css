@@ -107,7 +107,7 @@ article img {
 }
 
 .icon {
-    color: crimson;
+    color: #00A1E0;
     margin-right: 5px;
     display: flex;
     align-items: center;
@@ -160,7 +160,7 @@ article img {
         overflow: visible; /* Show all tags */
     }
 
-    /* Remove the crimson divider between posts */
+   
     #blog-post-container article + article {
         border-top: none;
         padding-top: 0;
