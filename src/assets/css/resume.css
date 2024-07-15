@@ -4,7 +4,6 @@ body {
     font-size: 1rem; /* 16px */
     color: #333;
     line-height: 1.6;
-    margin-bottom: 10px;
 }
 
 h2 {
@@ -24,16 +23,20 @@ p, li {
 }
 
 ul {
-    list-style-type: none; /* Remove bullet points */
+    list-style-type: none;
     padding: 0;
 }
 
 .resume-content ul li::before {
-    content: none; /* Remove bullet points */
+    content: "•";
+    color: crimson;
+    display: inline-block; 
+    width: 1em;
+    margin-left: -1em;
 }
 
 a {
-    color: #00A1E0;
+    color: crimson;
     text-decoration: none;
 }
 
@@ -49,70 +52,32 @@ a:hover {
     margin-bottom: 40px;
 }
 
-.certifications {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Ensure grid fills row from left to right */
-    gap: 10px; /* Reduce gap for more compact layout */
-    grid-auto-flow: dense; /* Pack the grid tightly */
-    justify-items: center; /* Center items horizontally */
+.work-experience h4, .education h4, .skills h4 {
+    margin-bottom: 10px;
 }
 
-.certifications .resume-section {
-    background-color: transparent;
-    padding: 0;
-    border-radius: 0;
+.certifications {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+.certification-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.certification-logo {
+    width: 120px;
+    height: auto;
 }
 
 #resume-container {
     margin-top: 100px;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-}
-
-.resume-content {
-    width: 95%; /* Increase width of the resume box */
-    max-width: 1200px;
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.resume-section {
-    margin-bottom: 75px;
-}
-
-.resume-section h3 {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.resume-section img.certification-logo {
-    max-height: 8rem; /* Increase size for certification logos */
-    width: auto;
-    vertical-align: middle; /* Align with the middle of the text */
-}
-
-.resume-section img.company-logo, .resume-section img.education-logo {
-    max-height: 3.0rem; /* Slightly smaller size for company and education logos */
-    width: auto;
-    vertical-align: middle; /* Align with the middle of the text */
-}
-
-.job-description {
-    margin-left: 2rem; /* Indent bullet points under job title */
-}
-
-.job-description ul {
-    list-style-type: disc;
-    padding-left: 1.5rem; /* Ensure bullet points are indented */
-}
-
-.job-description ul li {
-    margin-left: 1rem; /* Indent the bullet points themselves */
+    width: 90%;
+    margin: 100px auto;
 }
 
 @media (max-width: 768px) {
@@ -120,24 +85,24 @@ a:hover {
         font-size: 1.25rem;
     }
 
-    .certifications {
-        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Adjust for mobile */
+    .certifications ul, .skills ul {
+        flex-direction: column;
+        gap: 5px;
     }
+}
 
-    .resume-content {
-        width: 90%;
-        padding: 10px;
-    }
+.resume-section {
+    margin-bottom: 40px;
+}
 
-    .resume-section h3 {
-        font-size: 1.25rem;
-    }
+.resume-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
 
-    .resume-section img.certification-logo {
-        max-height: 6rem;
-    }
-
-    .resume-section img.company-logo, .resume-section img.education-logo {
-        max-height: 3rem;
-    }
+.company-logo, .education-logo {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+    vertical-align: middle;
 }
