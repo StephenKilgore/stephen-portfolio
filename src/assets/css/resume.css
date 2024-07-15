@@ -29,14 +29,14 @@ ul {
 
 .resume-content ul li::before {
     content: "•";
-    color: crimson;
+    color: #00A1E0;
     display: inline-block; 
     width: 1em;
     margin-left: -1em;
 }
 
 a {
-    color: crimson;
+    color: #00A1E0;
     text-decoration: none;
 }
 
@@ -58,7 +58,7 @@ a:hover {
 
 .certifications {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(75px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
     gap: 5px;
     justify-items: center;
 }
