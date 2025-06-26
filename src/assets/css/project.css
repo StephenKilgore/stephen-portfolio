@@ -1,74 +1,71 @@
+body {
+  background-color: #0d0d0d;
+  color: #06cd78;
+  font-family: 'Share Tech Mono', monospace;
+  margin: 0;
+  padding: 0;
+}
+
 .project-content {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  text-align: left; /* Ensure content is left-aligned */
   width: 90%;
-  margin: 0 auto; /* Center the content container */
-  margin-top: 100px;
-}
-/* Scoped styles for post content */
-.project-content h1 {
-  font-size: 2.5rem;
-  margin: 20px 0;
-  text-align: center;
-  color: #333;
-}
-
-.project-content h2 {
-  font-size: 2rem;
-  margin: 20px 0;
-  color: #555;
-}
-
-.project-content h3 {
-  font-size: 1.75rem;
-  margin: 20px 0;
-  color: #777;
-}
-
-.project-content h4 {
-  font-size: 1.5rem;
-  margin: 20px 0;
-  color: #999;
-}
-
-.project-content h5 {
-  font-size: 1.25rem;
-  margin: 20px 0;
-  color: #bbb;
-}
-
-.project-content h6 {
-  font-size: 1rem;
-  margin: 20px 0;
-  color: #ddd;
-}
-
-.project-content p {
+  margin: 100px auto 50px auto;
   font-size: 1.1rem;
-  line-height: 1.6;
-  margin: 10px 0;
-  margin-bottom: 20px;
-  color: #333;
+  line-height: 1.7;
+  text-align: left;
+  color: #06cd78;
 }
 
+/* Headings with glowing neon effect */
+.project-content h1,
+.project-content h2,
+.project-content h3,
+.project-content h4,
+.project-content h5,
+.project-content h6 {
+  font-weight: bold;
+  text-align: center;
+  margin: 20px 0;
+  text-shadow: 0 0 5px #06cd78, 0 0 10px #06cd78;
+}
+
+.project-content h1 { font-size: 2.5rem; }
+.project-content h2 { font-size: 2rem; }
+.project-content h3 { font-size: 1.75rem; }
+.project-content h4 { font-size: 1.5rem; }
+.project-content h5 { font-size: 1.25rem; }
+.project-content h6 { font-size: 1rem; }
+
+/* Paragraphs */
+.project-content p {
+  margin-bottom: 20px;
+  color: #06cd78;
+}
+
+/* Links */
 .project-content a {
-  color: #00A1E0;
+  color: #00ffff;
   text-decoration: none;
+  border-bottom: 1px dashed #06cd78;
 }
 
 .project-content a:hover {
-  text-decoration: underline;
+  text-shadow: 0 0 5px #00ffff;
+  border-bottom: 1px solid #06cd78;
 }
 
+/* Image */
 .project-content img {
-  max-width: 100%;
+  width: 100%;
   height: auto;
-  border-radius: 10px;
-  margin: 20px 0;
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow: 0 0 20px #06cd78;
+  margin: 30px 0;
 }
 
-.project-content ul, .project-content ol {
+/* Lists */
+.project-content ul,
+.project-content ol {
   margin: 20px 0;
   padding-left: 40px;
 }
@@ -77,29 +74,41 @@
   margin: 10px 0;
 }
 
+/* Emphasis and bold */
 .project-content em {
   font-style: italic;
+  color: #06cd78;
 }
 
 .project-content strong {
   font-weight: bold;
+  color: #06cd78;
 }
 
+/* Code blocks */
 .project-content pre {
-  background: #f5f5f5;
-  padding: 10px;
-  border-radius: 5px;
+  background: #111;
+  color: #06cd78;
+  padding: 15px;
+  border-radius: 10px;
   overflow-x: auto;
+  box-shadow: 0 0 10px #06cd78 inset;
 }
 
 .project-content code {
-  background: #f5f5f5;
-  padding: 2px 5px;
-  border-radius: 3px;
+  background: #111;
+  color: #06cd78;
+  padding: 2px 6px;
+  border-radius: 5px;
 }
-.project-content img {
-  width: 100%;
-  height: auto;
-  border-radius: 20px; /* Make the image rounded */
-  object-fit: cover;
+
+/* Responsive */
+@media (max-width: 768px) {
+  .project-content {
+    margin-top: 70px;
+  }
+
+  .project-content h1 {
+    font-size: 2rem;
+  }
 }
