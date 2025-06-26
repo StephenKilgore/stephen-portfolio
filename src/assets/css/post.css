@@ -1,225 +1,145 @@
-/* Common styles */
-h1 {
-  font-size: 2.5rem;
-  margin: 10px 0;
-  text-align: center;
+body {
+  background-color: #0a0a0a;
+  color: #d0f0ff;
+  font-family: 'Fira Code', monospace;
 }
 
-p {
-  font-size: 1.2rem;
-  margin: 10px 0;
+h1, h2, h3, h4, h5, h6 {
+  color: #06cd78;
+  font-weight: 600;
+  text-shadow: 0 0 5px #06cd78, 0 0 10px #06cd78;
 }
 
-#img-div {
-  width: 100%;
-  height: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 20px;
-}
-
-.post-image {
-  width: 100%;
-  max-width: 600px; /* Set a maximum width for the image */
-  height: auto;
-  border-radius: 20px; /* Make the image rounded */
-  object-fit: cover;
-}
-
-/* Center image container with fixed size and rounded corners */
-#img-div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  border-radius: 20px;
-  width: 100%;
-  max-width: 600px; /* Set a maximum width for the container */
-  margin: 0 auto 20px auto; /* Center the container and add bottom margin */
-}
-
-/* Stylized divider */
-.divider {
-  border: none;
-  border-top: 3px solid black;
-  margin: 20px 0;
-  width: 100%;
-  max-width: 600px; /* Set a maximum width for the divider */
-  margin: 20px auto; /* Center the divider */
-}
-
-/* Longer stylized divider */
-.divider-long {
-  border: none;
-  border-top: 3px solid black;
-  margin: 20px 0;
-  width: 100%;
-  max-width: 1000px; /* Set a longer maximum width for the divider */
-  margin: 20px auto; /* Center the divider */
-}
-
-.post-meta {
-  display: flex;
-  justify-content: center;
-  gap: 20px; /* Space between the date/time and tags */
-  width: 100%;
-  margin-bottom: 100px; /* Space between meta info and other elements */
-  flex-wrap: wrap; /* Allow wrapping */
-}
-
-#blog-preview-date-time {
-  display: flex;
-  align-items: center;
-  gap: 10px; /* Add space between items */
-  border: 3px solid black;
-  padding: 10px;
-  border-radius: 10px;
-  font-size: 0.9rem; /* Adjust font size */
-}
-
-#post-tags {
-  display: flex;
-  align-items: center;
-  gap: 1px; /* Add space between items */
-  border: 3px solid black;
-  padding: 10px;
-  border-radius: 10px;
-  font-size: 0.9rem; /* Adjust font size */
-}
-
-#post-tags a {
-  color: black; /* Tag link color */
+a {
+  color: #06cd78;
   text-decoration: none;
 }
-
-.icon {
-  color: #00A1E0; 
-  margin-right: 5px; /* Space between icon and text */
-  display: flex;
-  align-items: center;
+a:hover {
+  text-decoration: underline;
 }
 
 .post {
   margin-top: 100px;
   width: 100%;
+  padding: 0 5%;
+}
+
+.neon-frame {
+  border: 2px solid #06cd78;
+  border-radius: 12px;
+  box-shadow: 0 0 20px #00ffcc80;
+  padding: 20px;
+  background: #121212;
+}
+
+#img-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 15px;
+  margin-bottom: 30px;
+}
+
+.post-image {
+  max-width: 600px;
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 0 12px #00ffcc60;
+}
+
+.glow-title {
+  font-size: 2.75rem;
+  text-align: center;
+  text-shadow: 0 0 5px #06cd78, 0 0 20px #06cd78;
+}
+
+.divider-glow {
+  border: none;
+  border-top: 2px solid #06cd78;
+  width: 80%;
+  margin: 20px auto;
+  box-shadow: 0 0 10px #00ffcc80;
+}
+
+.neon-badge {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid #06cd78;
+  border-radius: 8px;
+  padding: 8px 12px;
+  box-shadow: 0 0 10px #00ffcc50;
+  background-color: #121212;
+  color: #d0f0ff;
+  font-size: 0.95rem;
+}
+
+.icon {
+  color: #06cd78;
+}
+
+.post-meta {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 60px;
 }
 
 .post-content {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   line-height: 1.6;
-  text-align: left; /* Ensure content is left-aligned */
-  width: 90%;
-  margin: 0 auto; /* Center the content container */
-}
-
-/* Scoped styles for post content */
-.post-content h1 {
-  font-size: 2.5rem;
-  margin: 20px 0;
-  text-align: center;
-  color: #333;
-}
-
-.post-content h2 {
-  font-size: 2rem;
-  margin: 20px 0;
-  color: #555;
-}
-
-.post-content h3 {
-  font-size: 1.75rem;
-  margin: 20px 0;
-  color: #777;
-}
-
-.post-content h4 {
-  font-size: 1.5rem;
-  margin: 20px 0;
-  color: #999;
-}
-
-.post-content h5 {
-  font-size: 1.25rem;
-  margin: 20px 0;
-  color: #bbb;
-}
-
-.post-content h6 {
-  font-size: 1rem;
-  margin: 20px 0;
-  color: #ddd;
+  color: #d0f0ff;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .post-content p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  margin: 10px 0;
   margin-bottom: 20px;
-  color: #333;
-}
-
-.post-content a {
-  color: #00A1E0;
-  text-decoration: none;
-}
-
-.post-content a:hover {
-  text-decoration: underline;
 }
 
 .post-content img {
-  max-width: 100%;
-  height: auto;
   border-radius: 10px;
+  max-width: 100%;
   margin: 20px 0;
+  box-shadow: 0 0 10px #00ffcc50;
 }
 
-.post-content ul, .post-content ol {
-  margin: 20px 0;
-  padding-left: 40px;
+.post-content a {
+  color: #06cd78;
 }
 
-.post-content li {
-  margin: 10px 0;
-}
-
-.post-content em {
-  font-style: italic;
-}
-
-.post-content strong {
-  font-weight: bold;
+.post-content code, .post-content pre {
+  background-color: #1a1a1a;
+  padding: 6px 10px;
+  border-radius: 5px;
+  font-family: 'Fira Code', monospace;
+  color: #06cd78;
 }
 
 .post-content pre {
-  background: #f5f5f5;
-  padding: 10px;
-  border-radius: 5px;
   overflow-x: auto;
 }
 
-.post-content code {
-  background: #f5f5f5;
-  padding: 2px 5px;
-  border-radius: 3px;
-}
-
-/* Table of Contents styles */
 #toc-container {
-  width: 90%;
-  margin: 20px auto;
-  background: #fff;
-  border: 1px solid #ddd;
+  background-color: #141414;
+  border: 1px solid #06cd78;
   border-radius: 10px;
   padding: 20px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 15px #00ffcc30;
+  margin: 30px auto;
+  width: 100%;
+  max-width: 800px;
 }
 
 #toc-container h2 {
-  font-size: 2rem;
-  margin-bottom: 10px;
+  font-size: 1.6rem;
   text-align: center;
+  margin-bottom: 10px;
+  color: #06cd78;
+  text-shadow: 0 0 5px #06cd78;
 }
 
 #table-of-contents ul {
@@ -228,12 +148,12 @@ p {
 }
 
 #table-of-contents li {
-  margin-bottom: 10px;
+  margin: 10px 0;
 }
 
 #table-of-contents a {
-  color: #00A1E0;
-  font-weight: normal;
+  color: #06cd78;
+  font-weight: 500;
   text-decoration: none;
 }
 
@@ -241,59 +161,26 @@ p {
   text-decoration: underline;
 }
 
-/* Indentation for nested ToC items */
 #table-of-contents ul ul {
   margin-left: 20px;
 }
 
-/* Mobile styles */
 @media (max-width: 768px) {
-  h1 {
-      font-size: 1.5rem; /* Adjusted font size for smaller screens */
-  }
-  
-  #img-div {
-      height: auto; /* Maintain aspect ratio */
-      margin-bottom: 10px; /* Reduce margin for smaller screens */
-      width: 100%; /* Full width for smaller screens */
+  .glow-title {
+    font-size: 2rem;
   }
 
   .post-meta {
-      flex-direction: column;
-      gap: 10px; /* Adjust gap between date/time and tags */
-      margin-bottom: 10px; /* Reduce margin for smaller screens */
-  }
-
-  #blog-preview-date-time, #post-tags {
-      width: 100%;
-      justify-content: center;
-      font-size: 0.7rem; /* Further reduce font size */
-  }
-
-  #blog-preview-date-time {
-      padding: 5px; /* Adjust padding for smaller screens */
-  }
-
-  #post-tags {
-      padding: 5px; /* Adjust padding for smaller screens */
-  }
-
-  #post-tags a {
-      margin-right: 3px; /* Adjust space between tags */
-      font-size: 0.7rem; /* Further reduce font size of tags */
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 30px;
   }
 
   .post-content {
-      padding: 10px; /* Add padding for smaller screens */
-      max-width: 100%; /* Ensure content spans full width on small screens */
+    padding: 10px;
   }
-  
+
   #toc-container {
-      width: 100%;
-      padding: 10px;
-  }
-  
-  #toc-container h2 {
-      font-size: 1.5rem;
+    padding: 15px;
   }
 }

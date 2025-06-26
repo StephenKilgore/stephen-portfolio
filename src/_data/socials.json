@@ -3,27 +3,33 @@
       {
         "text": "LinkedIn",
         "url": "https://www.linkedin.com/in/stephenkilgore/",
-        "icon": "./assets/images/linkedin.png"
+        "icon": "./assets/images/linkedin.png",
+        "style": "width: 5%;"
       },
       {
         "text": "Github",
         "url": "https://github.com/StephenKilgore",
-        "icon": "./assets/images/github.png"
+        "icon": "./assets/images/github.png",
+        "style": "width: 5%;"
+        
       },
       {
-        "text": "Docker Hub",
-        "url": "https://hub.docker.com/u/stephenkilgore",
-        "icon": "./assets/images/docker.webp"
+        "text": "TryHackMe",
+        "url": "https://tryhackme.com/p/devninja89",
+        "icon": "./assets/images/thm.png",
+        "style": "width: 5%;"
       },
       {
-        "text": "Stack Overflow",
-        "url": "https://stackoverflow.com/users/25680915/stephen-kilgore",
-        "icon": "./assets/images/stackoverflow.png"
+        "text": "HackTheBox",
+        "url": "https://app.hackthebox.com/profile/330312",
+        "icon": "./assets/images/htb.png",
+        "style": "width: 5%;"
       },
-      {
-        "text": "Trailhead",
-        "url": "https://www.salesforce.com/trailblazer/stephenkilgore",
-        "icon": "./assets/images/trailhead.png"
+        {
+        "text": "CyberDefenders",
+        "url": "https://cyberdefenders.org/p/stephenkilgore07#/overview",
+        "icon": "./assets/images/cyberdefenders.png",
+        "style": "width: 5%;"
       }
     ]
   }

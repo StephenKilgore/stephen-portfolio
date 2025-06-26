@@ -1,62 +1,53 @@
 {% extends "layouts/base.html" %}
 
 {% block content %}
-<div class="post">
+<div class="post neon-frame">
   <div id="img-div">
     <img src="{{ image }}" alt="{{ title }}" class="post-image" />
   </div>
-  <hr class="divider">
-  <h1>{{ title }}</h1>
-  <hr class="divider">
+  <hr class="divider-glow">
+  <h1 class="glow-title">{{ title }}</h1>
+  <hr class="divider-glow">
+
   <div class="post-meta">
-    <div id="blog-preview-date-time">
+    <div id="blog-preview-date-time" class="neon-badge">
       <span class="icon"><i class="fas fa-calendar-alt"></i></span> {{ date }}
       <span class="icon"><i class="fas fa-clock"></i></span> {{ rt }}
     </div>
-    <div id="post-tags">
+    <div id="post-tags" class="neon-badge">
       <span class="icon"><i class="fas fa-tags"></i></span>
       {%- for tag in tags -%}
-        <a href="/tags/{{ tag | slug }}">{{ tag }}</a>{% if not loop.last %}<span style="color: #00A1E0">,</span>{% endif %}
+        <a href="/tags/{{ tag | slug }}">{{ tag }}</a>{% if not loop.last %}<span style="color: #00ffcc">,</span>{% endif %}
       {%- endfor -%}
     </div>
   </div>
-  <div id="toc-container">
-    <h2>Table of Contents</h2>
+
+  <div id="toc-container" class="neon-card">
+    <h2 class="glow-subheading">Table of Contents</h2>
     <nav id="table-of-contents"></nav>
   </div>
+
   <div class="post-content">
     {{ content | safe }}
   </div>
 </div>
 
 <script>
-  document.addEventListener("DOMContentLoaded", function() {
-    console.log("DOM fully loaded and parsed");
-
+  document.addEventListener("DOMContentLoaded", function () {
     const tocContainer = document.getElementById("table-of-contents");
     const postContent = document.querySelector(".post-content");
-
-    console.log("TOC Container:", tocContainer);
-    console.log("Post Content:", postContent);
-
     if (tocContainer && postContent) {
       const headers = postContent.querySelectorAll("h2, h3");
-
-      console.log("Headers found:", headers.length);
-
       if (headers.length > 0) {
-        let tocList = document.createElement("ul");
+        const tocList = document.createElement("ul");
         let lastLevel = 2;
         let lastList = tocList;
 
         headers.forEach((header, index) => {
           header.id = "toc-" + index;
           const level = parseInt(header.tagName.charAt(1));
-
-          console.log(`Processing header: ${header.textContent} (Level ${level})`);
-
-          let tocItem = document.createElement("li");
-          let tocLink = document.createElement("a");
+          const tocItem = document.createElement("li");
+          const tocLink = document.createElement("a");
           tocLink.href = "#" + header.id;
           tocLink.textContent = header.textContent;
           tocItem.appendChild(tocLink);
@@ -66,8 +57,6 @@
             if (lastList.lastChild) {
               lastList.lastChild.appendChild(newList);
               lastList = newList;
-            } else {
-              console.error("Last list item does not exist to append the new list");
             }
           } else if (level < lastLevel) {
             lastList = tocList;
@@ -84,10 +73,8 @@
 
         tocContainer.appendChild(tocList);
       } else {
-        tocContainer.style.display = "none"; // Hide ToC if no headers found
+        tocContainer.style.display = "none";
       }
-    } else {
-      console.error("TOC Container or Post Content not found");
     }
   });
 </script>

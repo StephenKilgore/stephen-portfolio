@@ -2,12 +2,13 @@
 {% block content %}
 <div id="container">
     <div id="content">
-        <h1>{{intro.name}}</h1>
+        <img src='/assets/images/hacker-hoodie.png' alt='Hacker in hoodie' class='hoodie-img' />
+        <h1 class="glow">{{intro.name}}
         <h2>{{intro.tagline | safe}}</h2>
     </div>
     <div id="social-container">
         {% for item in socials.items %}
-            <a href="{{item.url}}"><img class="social-icon" src="{{item.icon}}" alt="{{item.text}}" /></a>
+            <a href="{{item.url}}"><img class="social-icon" src="{{item.icon}}" alt="{{item.text}}" style="{{item.style}}" /></a>
         {% endfor %} 
     </div>
     {{content | safe}}

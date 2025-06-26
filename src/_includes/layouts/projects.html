@@ -1,36 +1,37 @@
-{% extends "layouts/base.html" %} 
+{% extends "layouts/base.html" %}
 {% block content %}
 <div id="project-list-container">
+  <h1 class="glow-title">Stephen's Projects</h1>
+  <p class="intro-subtitle">Explore my favorite builds in tech and security</p>
   <div class="project-list">
     {%- for project in collections.projects -%}
-    <article class="project-item">
-      <div class="post-box">
-        <div class="img-div">
-          <a href="{{ project.url }}">
-            <img src="{{ project.data.image }}" alt="{{ project.data.title }}" class="project-image"/>
-          </a>
+    <article class="project-item neon-frame">
+      <div class="img-div">
+        <a href="{{ project.url }}">
+          <img src="{{ project.data.image }}" alt="{{ project.data.title }}" class="project-image"/>
+        </a>
+      </div>
+      <h2 class="glow-title"><a href="{{ project.url }}">{{ project.data.title }}</a></h2>
+      <p>{{ project.data.description }}</p>
+      <hr class="divider-glow" />
+      <div class="project-meta">
+        <div class="technologies">
+          <span class="icon"><i class="fas fa-tools"></i></span> <strong class="tech-label">Technologies Used:</strong>
+          <ul>
+            {% for tech in project.data.technologies %}
+            <li class="tag">{{ tech }}</li>
+            {% endfor %}
+          </ul>
         </div>
-        <h2><a href="{{ project.url }}">{{ project.data.title }}</a></h2>
-        <p>{{ project.data.description }}</p>
-        <div class="project-meta">
-          <div class="technologies">
-            <span class="icon"><i class="fas fa-tools"></i></span> <span>Technologies Used:</span>
-            <ul>
-              {% for tech in project.data.technologies %}
-              <li>{{ tech }}</li>
-              {% endfor %}
-            </ul>
-          </div>
-          <div class="environment">
-            <span class="icon"><i class="fas fa-server"></i></span> {{ project.data.environment }}
-          </div>
-          <div class="links">
-            <a href="{{ project.data.live_demo }}" class="button">Live Demo</a>
-            <a href="{{ project.data.github_link }}" class="button">GitHub Repo</a>
-            {% if project.data.blog_post %}
-            <a href="{{ project.data.blog_post }}" class="button">Read Blog Post</a>
-            {% endif %}
-          </div>
+        <div class="environment neon-badge">
+          <span class="icon"><i class="fas fa-server"></i></span> {{ project.data.environment }}
+        </div>
+        <div class="links">
+          <a href="{{ project.data.live_demo }}" class="button neon-button">Live Demo</a>
+          <a href="{{ project.data.github_link }}" class="button neon-button">GitHub Repo</a>
+          {% if project.data.blog_post %}
+          <a href="{{ project.data.blog_post }}" class="button neon-button">Read Blog Post</a>
+          {% endif %}
         </div>
       </div>
     </article>

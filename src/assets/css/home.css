@@ -1,63 +1,143 @@
+/* home.css - Updated to Match Cybersecurity Mockup */
+
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #0a0a0a;
+    color: #06cd78;
+    font-family: 'Share Tech Mono', monospace;
+}
+
 #content {
     text-align: center;
+    margin-top: 80px; /* extra space below nav */
+}
+
+h1.glow {
+    font-size: 4.8rem;
+    font-family: 'Share Tech Mono', monospace;
+    color: #b3b3b3;
+    background-image: repeating-linear-gradient(
+        to bottom,
+        #b3b3b3 0px,
+        #b3b3b3 1px,
+        transparent 2px,
+        transparent 4px
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: none;
+    margin-bottom: 20px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+}
+
+h2.tagline {
+    color: #06cd78;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 1.6rem;
+    margin: 12px 0 30px;
+    letter-spacing: 1.2px;
+    text-shadow: 0 0 6px #06cd78, 0 0 12px #06cd78;
 }
 
 .social-icon {
-    width: 60px;
-    margin-right: 10px;
+    width: 40px;
+    margin: 0 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+    filter: drop-shadow(0 0 8px #06cd78) brightness(1.2);
 }
 
 #social-container {
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin: 30px 0 50px;
     text-align: center;
 }
 
-h1 {
-    margin-bottom: 15px;
+.intro {
+    font-size: 1.25rem;
+    font-family: 'Share Tech Mono', monospace;
+    color: #06cd78;
+    max-width: 750px;
+    text-align: center;
+    margin-bottom: 40px;
+    line-height: 1.6;
 }
 
-/* Media query for small screens */
+.intro a,
+#container a:visited {
+    color: #06cd78;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.hoodie-img {
+    width: 25%;
+    filter: drop-shadow(0 0 8px #06cd78);
+    margin-bottom: 40px;
+}
+
+.cursor::after {
+    content: '_';
+    animation: blink 1s step-start infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+@keyframes neon-glow {
+    0%, 100% {
+        text-shadow: 0 0 10px #06cd78, 0 0 20px #06cd78;
+    }
+    50% {
+        text-shadow: 0 0 20px #06cd78, 0 0 40px #06cd78;
+    }
+}
+
+#main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+#site-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #0a0a0a;
+    color: #06cd78;
+    padding: 40px;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 700px;
+}
+
 @media (max-width: 768px) {
     #social-container {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-    
+
     .social-icon {
-        margin-right: 0;
         margin-bottom: 10px;
     }
-}
 
-#main-content {
-    display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    height: 100%; /* Make sure it takes the full height of its parent */
-}
-
-#site-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Center content vertically */
-}
-
-#container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Center content vertically */
-    align-items: center;
-    min-height: 700px;
-}
-#container a {
-    color: #00A1E0;
-    text-decoration: none;
-}
-#container a:visited {
-
-    color: #00A1E0;
-    text-decoration: none;
-    
+    .intro {
+        padding: 0 1rem;
+    }
 }

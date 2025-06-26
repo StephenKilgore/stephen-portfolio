@@ -4,7 +4,11 @@ layout: 'layouts/home.html'
 css: 'assets/css/home.css'
 intro:
   name: 'STEPHEN KILGORE'
-  tagline: "Software Engineer. <span style='color: #00A1E0;'>Salesforce</span> Aficionado."
+  tagline: "Cybersecurity Junkie<br><br><span style='color:#06cd78;'>Cloud | Blue Team | Red Team | Automation</span><br><br>"
 ---
 
-Want to learn more about me? Read [this blog post](/posts/hello-world!/).
+<div class='intro'>
+Curious about my transition from software engineering to cybersecurity? 
+<a href='/posts/my-cybersecurity-journey/'>Read my story</a> or check out my 
+<a href='/projects/ai-threat-hunting/'>latest project</a>.
+</div>
