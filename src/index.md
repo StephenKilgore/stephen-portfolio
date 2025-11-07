@@ -9,6 +9,6 @@ intro:
 
 <div class='intro'>
 Curious about my transition from software engineering to devops? 
-<a href='/posts/my-cybersecurity-journey/'>Read my story</a> or check out my 
-<a href='/projects/ai-threat-hunting/'>latest project</a>.
+<a href='/posts/hello-world/'>Read my story</a> or check out my 
+<a href='/projects/ai-insights/'>latest project</a>.
 </div>

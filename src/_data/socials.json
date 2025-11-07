@@ -12,24 +12,6 @@
         "icon": "./assets/images/github.png",
         "style": "width: 5%;"
         
-      },
-      {
-        "text": "TryHackMe",
-        "url": "https://tryhackme.com/p/devninja89",
-        "icon": "./assets/images/thm.png",
-        "style": "width: 5%;"
-      },
-      {
-        "text": "HackTheBox",
-        "url": "https://app.hackthebox.com/profile/330312",
-        "icon": "./assets/images/htb.png",
-        "style": "width: 5%;"
-      },
-        {
-        "text": "CyberDefenders",
-        "url": "https://cyberdefenders.org/p/stephenkilgore07#/overview",
-        "icon": "./assets/images/cyberdefenders.png",
-        "style": "width: 5%;"
       }
     ]
   }
